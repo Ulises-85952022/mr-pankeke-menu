@@ -1,0 +1,11 @@
+{
+  "name": "mr-pankeke",
+  "compatibility_date": "2026-10-23",
+  "assets": {
+    "directory": "./public"
+  },
+  "routes": [
+    { "pattern": "mrpankeketepa.com", "custom_domain": true },
+    { "pattern": "www.mrpankeketepa.com", "custom_domain": true }
+  ]
+}
