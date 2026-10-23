@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="es-MX"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Menú · Mr. Pankeke Coffee + Breakfast</title>
+  <meta name="description" content="Menú digital de Mr. Pankeke, desayunos y café en Tepatitlán, Jalisco desde 2014. Pankekes, chilaquiles, ensaladas, sándwiches y más.">
+  <meta name="theme-color" content="#1c1f22">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://mrpankeketepa.com/">
+
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="Menú · Mr. Pankeke Coffee + Breakfast">
+  <meta property="og:description" content="Amamos lo que cocinamos. Desayunos y café en Tepatitlán desde 2014.">
+  <meta property="og:url" content="https://mrpankeketepa.com/">
+  <meta property="og:image" content="https://mrpankeketepa.com/img/portada-1200.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&amp;display=swap">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preload" as="image" href="/img/fachada.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Mr. Pankeke Coffee + Breakfast",
+    "image": "https://mrpankeketepa.com/img/portada-1200.jpg",
+    "url": "https://mrpankeketepa.com/",
+    "telephone": "+52 378 113 4686",
+    "servesCuisine": ["Desayunos", "Café", "Mexicana"],
+    "priceRange": "$$",
+    "foundingDate": "2014",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Toltecas 189",
+      "addressLocality": "Tepatitlán de Morelos",
+      "addressRegion": "Jalisco",
+      "addressCountry": "MX"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "14:00"
+    }]
+  }
+  </script>
+  <script src="/app.js" defer=""></script>
+</head>
+<body>
+  <a class="skip" href="#menu">Saltar al menú</a>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Mr. Pankeke, inicio">
+      <svg class="brand-mark" viewBox="0 0 64 24" aria-hidden="true"><path d="M32 9c3-6 9-8 14-5 3 2 5 6 9 6 3 0 5-2 6-4 1 5-2 11-9 12-6 1-12-3-20-3S18 19 12 18C5 17 2 11 3 6c1 2 3 4 6 4 4 0 6-4 9-6 5-3 11-1 14 5z" fill="currentColor"></path></svg>
+      <span>Mr. Pankeke</span>
+    </a>
+    <nav class="topnav" aria-label="Secciones">
+      <a href="#menu">Comida</a>
+      <a href="#g-bebidas">Bebidas</a>
+    </nav>
+    <button class="icon-btn" id="share" type="button" aria-label="Compartir este menú" hidden="">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16a3 3 0 0 0-2.4 1.2l-6.7-3.4a3 3 0 0 0 0-1.6l6.7-3.4A3 3 0 1 0 15 7l-6.7 3.4a3 3 0 1 0 0 3.2L15 17a3 3 0 1 0 3-1z" fill="currentColor"></path></svg>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <img class="hero-photo" src="/img/fachada.jpg" width="1064" height="584" alt="Fachada de ladrillo de Mr. Pankeke con su letrero de bigote, terraza con plantas y un pizarrón que dice “Hay que ser felices”.">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <p class="since" aria-label="Desde 2014"><span>Desde</span><strong>2014</strong></p>
+      <div class="hero-body">
+        <img class="hero-logo" src="/img/logo.png" width="600" height="425" alt="Mr. Pankeke Coffee + Breakfast">
+        <p class="eyebrow">Bienvenidos · Tepatitlán, Jalisco</p>
+        <h1 id="hero-title">“Amamos lo que cocinamos”</h1>
+        <p class="hero-lead">Elige con calma. Cuando estés listo, tu mesero se acerca a tu mesa para tomar tu orden.</p>
+        <a class="btn btn-primary" href="#menu">Ver el menú</a>
+      </div>
+    </section>
+
+    <section class="section" id="menu" aria-labelledby="menu-title">
+      <div class="section-head">
+        <p class="eyebrow">Carta completa</p>
+        <h2 id="menu-title">Menú</h2>
+      </div>
+
+      <nav class="catnav" id="catnav" aria-label="Secciones del menú">
+        <a href="#pankekes">Pankekes</a>
+        <a href="#frutas">Frutas</a>
+        <a href="#toast">Toast</a>
+        <a href="#especiales">Especiales</a>
+        <a href="#mr-pankeke">Mr. Pankeke</a>
+        <a href="#huevos">Huevos</a>
+        <a href="#chilaquiles">Chilaquiles</a>
+        <a href="#molletes">Molletes</a>
+        <a href="#ensaladas">Ensaladas</a>
+        <a href="#sandwiches">Sándwiches</a>
+        <a href="#burritos">Burritos</a>
+        <a href="#snacks">Snacks</a>
+        <a href="#calientes">Calientes</a>
+        <a href="#jugos">Jugos</a>
+        <a href="#especialidades">Frappés</a>
+      </nav>
+
+      <div class="search" id="search" hidden="">
+        <label class="sr-only" for="q">Buscar en el menú</label>
+        <input id="q" type="search" placeholder="Buscar platillo o bebida…" autocomplete="off" enterkeyhint="search">
+        <p class="search-empty" id="search-empty" hidden="">No encontramos ese platillo. Pregúntale a tu mesero.</p>
+      </div>
+
+      <div class="favs-wrap" id="favoritos">
+        <h3 class="group-title">Favoritos de la casa</h3>
+        <ul class="favs">
+          <li class="fav">
+            <img src="/img/taco-keke-600.jpg" srcset="/img/taco-keke-600.jpg 600w, /img/taco-keke-1000.jpg 1000w" sizes="(min-width: 900px) 20rem, 78vw" width="1000" height="750" loading="lazy" alt="Pankeke grande doblado, relleno de yogurt, con frambuesas, zarzamoras, fresas y cereal.">
+            <div class="fav-body">
+              <div class="row-head"><h4>Taco-Keke</h4><span class="price">$110</span></div>
+              <p>1 pancake grande relleno de yogurt, berries y cereal.</p>
+            </div>
+          </li>
+          <li class="fav">
+            <img src="/img/choco-keke-600.jpg" srcset="/img/choco-keke-600.jpg 600w, /img/choco-keke-1200.jpg 1200w" sizes="(min-width: 900px) 20rem, 78vw" width="1200" height="900" loading="lazy" alt="Torre de pankekes con plátano, chispas de chocolate, jarabe de chocolate y crema batida.">
+            <div class="fav-body">
+              <div class="row-head"><h4>Choco-Keke</h4><span class="price">$115</span></div>
+              <p>3 pancakes rellenos de chocolate y helado.</p>
+            </div>
+          </li>
+          <li class="fav">
+            <img src="/img/chilaquiles-especiales-600.jpg" srcset="/img/chilaquiles-especiales-600.jpg 600w, /img/chilaquiles-especiales-1200.jpg 1200w" sizes="(min-width: 900px) 20rem, 78vw" width="1200" height="900" loading="lazy" alt="Chilaquiles verdes con rajas de poblano, elote, crema, queso fresco y pico de gallo.">
+            <div class="fav-body">
+              <div class="row-head"><h4>Chilaquiles Especiales</h4><span class="price">$130</span></div>
+              <p>Ensombrerados o con proteína, frijoles y pan tostado. Salsa verde, roja o poblana.</p>
+            </div>
+          </li>
+          <li class="fav">
+            <img src="/img/chilaquiles-nortenos-600.jpg" srcset="/img/chilaquiles-nortenos-600.jpg 600w, /img/chilaquiles-nortenos-768.jpg 768w" sizes="(min-width: 900px) 20rem, 78vw" width="768" height="576" loading="lazy" alt="Chilaquiles rojos con arrachera, pico de gallo, crema, frijoles y guacamole con totopos.">
+            <div class="fav-body">
+              <div class="row-head"><h4>Chilaquiles Norteños</h4><span class="price">$145</span></div>
+              <p>Salsa de chipotle, arrachera, frijoles y guacamole.</p>
+            </div>
+          </li>
+          <li class="fav">
+            <img src="/img/sweet-and-salty-600.jpg" srcset="/img/sweet-and-salty-600.jpg 600w, /img/sweet-and-salty-1200.jpg 1200w" sizes="(min-width: 900px) 20rem, 78vw" width="1200" height="900" loading="lazy" alt="Chilaquiles verdes con dos huevos estrellados y waffles con kiwi, blueberries y almendra.">
+            <div class="fav-body">
+              <div class="row-head"><h4>Sweet and Salty</h4><span class="price">$125</span></div>
+              
+            </div>
+          </li>
+          <li class="fav">
+            <img src="/img/sope-benedicto-600.jpg" srcset="/img/sope-benedicto-600.jpg 600w, /img/sope-benedicto-1200.jpg 1200w" sizes="(min-width: 900px) 20rem, 78vw" width="1200" height="900" loading="lazy" alt="Dos sopes estilo benedicto con huevo, salsa holandesa, carne, aguacate, germinado y flores comestibles.">
+            <div class="fav-body">
+              <div class="row-head"><h4>Sope Benedicto</h4><span class="price">$120</span></div>
+              
+            </div>
+          </li>
+          <li class="fav">
+            <img src="/img/lonche-terminator-600.jpg" srcset="/img/lonche-terminator-600.jpg 600w, /img/lonche-terminator-677.jpg 677w" sizes="(min-width: 900px) 20rem, 78vw" width="677" height="508" loading="lazy" alt="Lonche partido a la mitad con pollo, tocino, huevo estrellado y lechuga.">
+            <div class="fav-body">
+              <div class="row-head"><h4>Lonche Terminator</h4><span class="price">$120</span></div>
+              <p>Pollo, tocino y dos huevos estrellados.</p>
+            </div>
+          </li>
+          <li class="fav">
+            <img src="/img/croissant-600.jpg" srcset="/img/croissant-600.jpg 600w, /img/croissant-880.jpg 880w" sizes="(min-width: 900px) 20rem, 78vw" width="880" height="660" loading="lazy" alt="Croissant relleno de huevo, jamón, tocino y queso amarillo derretido.">
+            <div class="fav-body">
+              <div class="row-head"><h4>Croissant Relleno</h4><span class="price">$69</span></div>
+              
+            </div>
+          </li>
+          <li class="fav">
+            <img src="/img/fruit-salad-600.jpg" srcset="/img/fruit-salad-600.jpg 600w, /img/fruit-salad-1200.jpg 1200w" sizes="(min-width: 900px) 20rem, 78vw" width="1200" height="900" loading="lazy" alt="Ensalada de hojas verdes con fruta fresca y tiras de pollo a la plancha.">
+            <div class="fav-body">
+              <div class="row-head"><h4>Fruit Salad c/ Pollo</h4><span class="price">$140</span></div>
+              <p>Con pollo a la plancha o empanizado.</p>
+            </div>
+          </li>
+          <li class="fav">
+            <img src="/img/sopa-azteca-600.jpg" srcset="/img/sopa-azteca-600.jpg 600w, /img/sopa-azteca-1200.jpg 1200w" sizes="(min-width: 900px) 20rem, 78vw" width="1200" height="900" loading="lazy" alt="Sopa azteca en molcajete con tiras de tortilla, aguacate, queso panela, crema y camarones.">
+            <div class="fav-body">
+              <div class="row-head"><h4>Sopa Azteca</h4><span class="price">$89</span></div>
+              <p>Con proteína $120.</p>
+            </div>
+          </li>
+          <li class="fav">
+            <img src="/img/sandwich-atun-600.jpg" srcset="/img/sandwich-atun-600.jpg 600w, /img/sandwich-atun-1200.jpg 1200w" sizes="(min-width: 900px) 20rem, 78vw" width="1200" height="900" loading="lazy" alt="Sándwich de atún en pan integral con germinado, espinaca, manzana y jitomate.">
+            <div class="fav-body">
+              <div class="row-head"><h4>Sándwich de Atún</h4><span class="price">$89</span></div>
+              
+            <p>Ensalada de atún especial de la casa, con aderezo y manzana, en pan 12 granos.</p></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="group" id="g-comida">
+        <h3 class="group-title">Para comer</h3>
+        <section class="cat" id="pankekes" aria-labelledby="pankekes-t">
+          <h3 class="cat-title" id="pankekes-t">Pankekes y Waffles</h3>
+          
+          <ul class="rows">
+            <li class="row" data-search="tradicionales 2 pancakes, mantequilla y maple.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Tradicionales</h4><span class="leader" aria-hidden="true"></span><span class="price">$99</span></div>
+                <p>2 pancakes, mantequilla y maple.</p>
+              </div>
+            </li>
+            <li class="row has-thumb" data-search="taco-keke 1 pancake grande relleno de yogurt, berries y cereal.">
+              <img src="/img/taco-keke-sq.jpg" width="96" height="96" loading="lazy" alt="">
+              <div class="row-main">
+                <div class="row-head"><h4>Taco-Keke</h4><span class="leader" aria-hidden="true"></span><span class="price">$110</span></div>
+                <p>1 pancake grande relleno de yogurt, berries y cereal.</p>
+              </div>
+            </li>
+            <li class="row" data-search="volteado de plátano 3 pancakes con plátano caramelizado y helado de vainilla.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Volteado de Plátano</h4><span class="leader" aria-hidden="true"></span><span class="price">$120</span></div>
+                <p>3 pancakes con plátano caramelizado y helado de vainilla.</p>
+              </div>
+            </li>
+            <li class="row has-thumb" data-search="choco-keke 3 pancakes rellenos de chocolate y helado.">
+              <img src="/img/choco-keke-sq.jpg" width="96" height="96" loading="lazy" alt="">
+              <div class="row-main">
+                <div class="row-head"><h4>Choco-Keke</h4><span class="leader" aria-hidden="true"></span><span class="price">$115</span></div>
+                <p>3 pancakes rellenos de chocolate y helado.</p>
+              </div>
+            </li>
+            <li class="row" data-search="pankeke vegano pankeke de avena, crema de cacahuate, mermelada de frambuesa, frutos rojos, cereales y crema batida.">
+              
+              <div class="row-main">
+                <div class="row-head is-long"><h4>Pankeke Vegano</h4><span class="leader" aria-hidden="true"></span><span class="price">1 pz $66 · 2 pzs $91 · 3 pzs $114</span></div>
+                <p>Pankeke de avena, crema de cacahuate, mermelada de frambuesa, frutos rojos, cereales y crema batida.</p>
+              </div>
+            </li>
+            <li class="row" data-search="canela roll 3 pancakes con cajeta, manzana caramelizada, blueberries y helado al gusto.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Canela Roll</h4><span class="leader" aria-hidden="true"></span><span class="price">$120</span></div>
+                <p>3 pancakes con cajeta, manzana caramelizada, blueberries y helado al gusto.</p>
+              </div>
+            </li>
+            <li class="row" data-search="happy face carita feliz de fresa y plátano, lechera y crema batida.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Happy Face</h4><span class="leader" aria-hidden="true"></span><span class="price">$79</span></div>
+                <p>Carita feliz de fresa y plátano, lechera y crema batida.</p>
+              </div>
+            </li>
+            <li class="row" data-search="sweet pink cake 3 pancakes con chantilly, fresas caramelizadas y almendras.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Sweet Pink Cake</h4><span class="leader" aria-hidden="true"></span><span class="price">$120</span></div>
+                <p>3 pancakes con chantilly, fresas caramelizadas y almendras.</p>
+              </div>
+            </li>
+            <li class="row" data-search="pan francés tradicional 2 rebanadas sencillas.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Pan Francés Tradicional</h4><span class="leader" aria-hidden="true"></span><span class="price">$99</span></div>
+                <p>2 rebanadas sencillas.</p>
+              </div>
+            </li>
+            <li class="row" data-search="pan francés c/ salchicha o fruta con salchicha, tocino o fruta a su elección.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Pan Francés c/ Salchicha o Fruta</h4><span class="leader" aria-hidden="true"></span><span class="price">$120</span></div>
+                <p>Con salchicha, tocino o fruta a su elección.</p>
+              </div>
+            </li>
+            <li class="row" data-search="sándwich francés brioche relleno de queso crema, fresas, nuez, crema batida, almendras y lechera.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Sándwich Francés</h4><span class="leader" aria-hidden="true"></span><span class="price">$120</span></div>
+                <p>Brioche relleno de queso crema, fresas, nuez, crema batida, almendras y lechera.</p>
+              </div>
+            </li>
+            <li class="row" data-search="integral honey nuts harina integral, cereales, helado de vainilla y nuez.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Integral Honey Nuts</h4><span class="leader" aria-hidden="true"></span><span class="price">$120</span></div>
+                <p>Harina integral, cereales, helado de vainilla y nuez.</p>
+              </div>
+            </li>
+            <li class="row" data-search="waffles mixtos waffles dorados con chantilly y fruta a elección.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Waffles Mixtos</h4><span class="leader" aria-hidden="true"></span><span class="price">$120</span></div>
+                <p>Waffles dorados con chantilly y fruta a elección.</p>
+              </div>
+            </li>
+            <li class="row" data-search="waffles frutos rojos waffles dorados con chantilly y berries.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Waffles Frutos Rojos</h4><span class="leader" aria-hidden="true"></span><span class="price">$130</span></div>
+                <p>Waffles dorados con chantilly y berries.</p>
+              </div>
+            </li>
+            <li class="row" data-search="waffle de avena con harina de plátano y avena.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Waffle de Avena</h4><span class="leader" aria-hidden="true"></span><span class="price">$130</span></div>
+                <p>Con harina de plátano y avena.</p>
+              </div>
+            </li>
+            <li class="row" data-search="sunshine waffle waffle de avena, helado de vainilla, fresas, cajeta y canela.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Sunshine Waffle</h4><span class="leader" aria-hidden="true"></span><span class="price">$130</span></div>
+                <p>Waffle de avena, helado de vainilla, fresas, cajeta y canela.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="frutas" aria-labelledby="frutas-t">
+          <h3 class="cat-title" id="frutas-t">Frutas y Cereales</h3>
+          
+          <ul class="rows">
+            <li class="row" data-search="frutas de temporada c/ yogurt ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Frutas de Temporada c/ Yogurt</h4><span class="leader" aria-hidden="true"></span><span class="price">$85</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="frutas con cottage ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Frutas con Cottage</h4><span class="leader" aria-hidden="true"></span><span class="price">$99</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="frutas con cereal ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Frutas con Cereal</h4><span class="leader" aria-hidden="true"></span><span class="price">$79</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="avena con frutas y cereal ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Avena con Frutas y Cereal</h4><span class="leader" aria-hidden="true"></span><span class="price">$89</span></div>
+                
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="toast" aria-labelledby="toast-t">
+          <h3 class="cat-title" id="toast-t">Toast &amp; Bagels</h3>
+          
+          <ul class="rows">
+            <li class="row" data-search="tribeca pan de masa madre, salmón (receta de la casa), huevo estrellado y especias.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Tribeca</h4><span class="leader" aria-hidden="true"></span><span class="price">$109</span></div>
+                <p>Pan de masa madre, salmón (receta de la casa), huevo estrellado y especias.</p>
+              </div>
+            </li>
+            <li class="row" data-search="frank sinatra manchego, jamón, tocino, tomate deshidratado, champiñón, espinaca, morrón, aguacate y huevo al gusto.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Frank Sinatra</h4><span class="leader" aria-hidden="true"></span><span class="price">$99</span></div>
+                <p>Manchego, jamón, tocino, tomate deshidratado, champiñón, espinaca, morrón, aguacate y huevo al gusto.</p>
+              </div>
+            </li>
+            <li class="row" data-search="tierra santa guacamole con champiñón, rajas, elote y huevo revuelto.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Tierra Santa</h4><span class="leader" aria-hidden="true"></span><span class="price">$99</span></div>
+                <p>Guacamole con champiñón, rajas, elote y huevo revuelto.</p>
+              </div>
+            </li>
+            <li class="row" data-search="avocado toast guacamole, huevo revuelto con cottage, arúgula y tomate cherry.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Avocado Toast</h4><span class="leader" aria-hidden="true"></span><span class="price">$99</span></div>
+                <p>Guacamole, huevo revuelto con cottage, arúgula y tomate cherry.</p>
+              </div>
+            </li>
+            <li class="row" data-search="chapata gourmet mezcla de carnes frías con queso, aderezo y vegetales.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Chapata Gourmet</h4><span class="leader" aria-hidden="true"></span><span class="price">$115</span></div>
+                
+              <p>Mezcla de carnes frías con queso, aderezo y vegetales.</p></div>
+            </li>
+            <li class="row has-thumb" data-search="croissant relleno ">
+              <img src="/img/croissant-sq.jpg" width="96" height="96" loading="lazy" alt="">
+              <div class="row-main">
+                <div class="row-head"><h4>Croissant Relleno</h4><span class="leader" aria-hidden="true"></span><span class="price">$69</span></div>
+                
+              </div>
+            </li>
+            <li class="row has-thumb" data-search="sándwich de atún ensalada de atún especial de la casa, con aderezo y manzana, en pan 12 granos.">
+              <img src="/img/sandwich-atun-sq.jpg" width="96" height="96" loading="lazy" alt="">
+              <div class="row-main">
+                <div class="row-head"><h4>Sándwich de Atún</h4><span class="leader" aria-hidden="true"></span><span class="price">$89</span></div>
+                
+              <p>Ensalada de atún especial de la casa, con aderezo y manzana, en pan 12 granos.</p></div>
+            </li>
+            <li class="row" data-search="bagel salmón salmón salteado a la mantequilla con vegetales frescos y aderezos.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Bagel Salmón</h4><span class="leader" aria-hidden="true"></span><span class="price">$115</span></div>
+                
+              <p>Salmón salteado a la mantequilla con vegetales frescos y aderezos.</p></div>
+            </li>
+            <li class="row" data-search="bagel arrachera arrachera salteada a la mantequilla con cebolla y champiñón, vegetales frescos y aderezos.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Bagel Arrachera</h4><span class="leader" aria-hidden="true"></span><span class="price">$110</span></div>
+                
+              <p>Arrachera salteada a la mantequilla con cebolla y champiñón, vegetales frescos y aderezos.</p></div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="especiales" aria-labelledby="especiales-t">
+          <h3 class="cat-title" id="especiales-t">Especiales de la Casa</h3>
+          
+          <ul class="rows">
+            <li class="row" data-search="enchiladas suizas ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Enchiladas Suizas</h4><span class="leader" aria-hidden="true"></span><span class="price">$120</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="enfrijoladas a la mexicana ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Enfrijoladas a la Mexicana</h4><span class="leader" aria-hidden="true"></span><span class="price">$105</span></div>
+                
+              </div>
+            </li>
+            <li class="row has-thumb" data-search="sweet and salty ">
+              <img src="/img/sweet-and-salty-sq.jpg" width="96" height="96" loading="lazy" alt="">
+              <div class="row-main">
+                <div class="row-head"><h4>Sweet and Salty</h4><span class="leader" aria-hidden="true"></span><span class="price">$125</span></div>
+                
+              </div>
+            </li>
+            <li class="row has-thumb" data-search="sope benedicto ">
+              <img src="/img/sope-benedicto-sq.jpg" width="96" height="96" loading="lazy" alt="">
+              <div class="row-main">
+                <div class="row-head"><h4>Sope Benedicto</h4><span class="leader" aria-hidden="true"></span><span class="price">$120</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="taco de camarón ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Taco de Camarón</h4><span class="leader" aria-hidden="true"></span><span class="price">$99</span></div>
+                
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="mr-pankeke" aria-labelledby="mr-pankeke-t">
+          <h3 class="cat-title" id="mr-pankeke-t">Mr. Pankeke</h3>
+          
+          <ul class="rows">
+            <li class="row" data-search="mr. pankeke con huevo papa rallada, cóctel de frutas y 2 pancakes. con huevo al gusto.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Mr. Pankeke con Huevo</h4><span class="leader" aria-hidden="true"></span><span class="price">$135</span></div>
+                <p>Papa rallada, cóctel de frutas y 2 pancakes. Con huevo al gusto.</p>
+              </div>
+            </li>
+            <li class="row" data-search="mr. pankeke mixto chilaquiles al gusto, huevo al gusto, fruta fresca y 2 pancakes.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Mr. Pankeke Mixto</h4><span class="leader" aria-hidden="true"></span><span class="price">$150</span></div>
+                <p>Chilaquiles al gusto, huevo al gusto, fruta fresca y 2 pancakes.</p>
+              </div>
+            </li>
+            <li class="row" data-search="mr. pankeke con chilaquiles papa rallada, cóctel de frutas y 2 pancakes. con chilaquiles.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Mr. Pankeke con Chilaquiles</h4><span class="leader" aria-hidden="true"></span><span class="price">$145</span></div>
+                <p>Papa rallada, cóctel de frutas y 2 pancakes. Con chilaquiles.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="huevos" aria-labelledby="huevos-t">
+          <h3 class="cat-title" id="huevos-t">Huevos</h3>
+          
+          <ul class="rows">
+            <li class="row" data-search="omelette al gusto 2 ingredientes, papa rallada y pan tostado.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Omelette al Gusto</h4><span class="leader" aria-hidden="true"></span><span class="price">$99</span></div>
+                <p>2 ingredientes, papa rallada y pan tostado.</p>
+              </div>
+            </li>
+            <li class="row" data-search="omelette ejecutivo salmón, papa rallada y pan tostado.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Omelette Ejecutivo</h4><span class="leader" aria-hidden="true"></span><span class="price">$125</span></div>
+                <p>Salmón, papa rallada y pan tostado.</p>
+              </div>
+            </li>
+            <li class="row" data-search="omelette marina's camarón, tocino y vegetales, papa rallada y pan tostado.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Omelette Marina's</h4><span class="leader" aria-hidden="true"></span><span class="price">$130</span></div>
+                <p>Camarón, tocino y vegetales, papa rallada y pan tostado.</p>
+              </div>
+            </li>
+            <li class="row" data-search="omelette con ensalada 4 ingredientes, pan tostado y ensalada fresca.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Omelette con Ensalada</h4><span class="leader" aria-hidden="true"></span><span class="price">$150</span></div>
+                <p>4 ingredientes, pan tostado y ensalada fresca.</p>
+              </div>
+            </li>
+            <li class="row" data-search="huevos al gusto 2 huevos, chilaquiles y frijoles.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Huevos al Gusto</h4><span class="leader" aria-hidden="true"></span><span class="price">$109</span></div>
+                <p>2 huevos, chilaquiles y frijoles.</p>
+              </div>
+            </li>
+            <li class="row" data-search="huevos rancheros 2 huevos estrellados, frijoles, tortilla frita y guacamole.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Huevos Rancheros</h4><span class="leader" aria-hidden="true"></span><span class="price">$99</span></div>
+                <p>2 huevos estrellados, frijoles, tortilla frita y guacamole.</p>
+              </div>
+            </li>
+            <li class="row" data-search="omelette vegetariano espinacas, jitomate, cebolla, papa rallada y pan tostado.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Omelette Vegetariano</h4><span class="leader" aria-hidden="true"></span><span class="price">$89</span></div>
+                <p>Espinacas, jitomate, cebolla, papa rallada y pan tostado.</p>
+              </div>
+            </li>
+            <li class="row" data-search="omelette colorado arrachera, vegetales, papa rallada y pan tostado.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Omelette Colorado</h4><span class="leader" aria-hidden="true"></span><span class="price">$130</span></div>
+                <p>Arrachera, vegetales, papa rallada y pan tostado.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="chilaquiles" aria-labelledby="chilaquiles-t">
+          <h3 class="cat-title" id="chilaquiles-t">Chilaquiles</h3>
+          
+          <ul class="rows">
+            <li class="row" data-search="chilaquiles tradicionales con frijoles y pan tostado. salsa verde, roja o poblana.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Chilaquiles Tradicionales</h4><span class="leader" aria-hidden="true"></span><span class="price">$119</span></div>
+                <p>Con frijoles y pan tostado. Salsa verde, roja o poblana.</p>
+              </div>
+            </li>
+            <li class="row has-thumb" data-search="chilaquiles especiales ensombrerados o con proteína, frijoles y pan tostado. salsa verde, roja o poblana.">
+              <img src="/img/chilaquiles-especiales-sq.jpg" width="96" height="96" loading="lazy" alt="">
+              <div class="row-main">
+                <div class="row-head"><h4>Chilaquiles Especiales</h4><span class="leader" aria-hidden="true"></span><span class="price">$130</span></div>
+                <p>Ensombrerados o con proteína, frijoles y pan tostado. Salsa verde, roja o poblana.</p>
+              </div>
+            </li>
+            <li class="row has-thumb" data-search="chilaquiles norteños salsa de chipotle, arrachera, frijoles y guacamole.">
+              <img src="/img/chilaquiles-nortenos-sq.jpg" width="96" height="96" loading="lazy" alt="">
+              <div class="row-main">
+                <div class="row-head"><h4>Chilaquiles Norteños</h4><span class="leader" aria-hidden="true"></span><span class="price">$145</span></div>
+                <p>Salsa de chipotle, arrachera, frijoles y guacamole.</p>
+              </div>
+            </li>
+            <li class="row" data-search="chilaquiles ahogados salsa especial de la casa muy picante, arrachera y frijoles.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Chilaquiles Ahogados</h4><span class="leader" aria-hidden="true"></span><span class="price">$130</span></div>
+                <p>Salsa especial de la casa muy picante, arrachera y frijoles.</p>
+              </div>
+            </li>
+            <li class="row" data-search="omelette c/ chilaquiles 4 ingredientes y pan tostado. salsa verde, roja o poblana.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Omelette c/ Chilaquiles</h4><span class="leader" aria-hidden="true"></span><span class="price">$150</span></div>
+                <p>4 ingredientes y pan tostado. Salsa verde, roja o poblana.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="molletes" aria-labelledby="molletes-t">
+          <h3 class="cat-title" id="molletes-t">Molletes</h3>
+          
+          <ul class="rows">
+            <li class="row" data-search="frijoles con queso frijoles refritos de la casa y manchego.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Frijoles con Queso</h4><span class="leader" aria-hidden="true"></span><span class="price">$75</span></div>
+                <p>Frijoles refritos de la casa y manchego.</p>
+              </div>
+            </li>
+            <li class="row" data-search="molletes choriqueso chorizo parrillero y queso fundido.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Molletes Choriqueso</h4><span class="leader" aria-hidden="true"></span><span class="price">$85</span></div>
+                <p>Chorizo parrillero y queso fundido.</p>
+              </div>
+            </li>
+            <li class="row" data-search="jamón y frijol jamón de pierna y frijoles fritos con queso.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Jamón y Frijol</h4><span class="leader" aria-hidden="true"></span><span class="price">$85</span></div>
+                <p>Jamón de pierna y frijoles fritos con queso.</p>
+              </div>
+            </li>
+            <li class="row" data-search="azúcar y canela mantequilla derretida, canela y azúcar.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Azúcar y Canela</h4><span class="leader" aria-hidden="true"></span><span class="price">$59</span></div>
+                <p>Mantequilla derretida, canela y azúcar.</p>
+              </div>
+            </li>
+            <li class="row" data-search="cajeta y canela cajeta quemada tradicional tibia con nuez.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Cajeta y Canela</h4><span class="leader" aria-hidden="true"></span><span class="price">$69</span></div>
+                <p>Cajeta quemada tradicional tibia con nuez.</p>
+              </div>
+            </li>
+            <li class="row" data-search="molletes mixtos 1 pieza dulce y 1 pieza salada al gusto.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Molletes Mixtos</h4><span class="leader" aria-hidden="true"></span><span class="price">$89</span></div>
+                <p>1 pieza dulce y 1 pieza salada al gusto.</p>
+              </div>
+            </li>
+            <li class="row" data-search="tecolote con chilaquiles 1 mollete de frijoles, chorizo y queso, coronado con chilaquiles norteños con arrachera y guacamole.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Tecolote con Chilaquiles</h4><span class="leader" aria-hidden="true"></span><span class="price">$89</span></div>
+                
+              <p>1 mollete de frijoles, chorizo y queso, coronado con chilaquiles norteños con arrachera y guacamole.</p></div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="ensaladas" aria-labelledby="ensaladas-t">
+          <h3 class="cat-title" id="ensaladas-t">Ensaladas y Sopas</h3>
+          
+          <ul class="rows">
+            <li class="row" data-search="chicken strips pollo empanizado, ensalada fresca y papas a la francesa.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Chicken Strips</h4><span class="leader" aria-hidden="true"></span><span class="price">$120</span></div>
+                <p>Pollo empanizado, ensalada fresca y papas a la francesa.</p>
+              </div>
+            </li>
+            <li class="row" data-search="ensalada chef pollo lechuga, zanahoria, jitomate, queso, pollo, chile morrón.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Ensalada Chef Pollo</h4><span class="leader" aria-hidden="true"></span><span class="price">$140</span></div>
+                <p>Lechuga, zanahoria, jitomate, queso, pollo, chile morrón.</p>
+              </div>
+            </li>
+            <li class="row" data-search="atún con aguacate ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Atún con Aguacate</h4><span class="leader" aria-hidden="true"></span><span class="price">$99</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="ensalada ranchera tortilla frita, frijoles, jamón, huevo estrellado, ensalada del chef y guacamole.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Ensalada Ranchera</h4><span class="leader" aria-hidden="true"></span><span class="price">$109</span></div>
+                <p>Tortilla frita, frijoles, jamón, huevo estrellado, ensalada del chef y guacamole.</p>
+              </div>
+            </li>
+            <li class="row has-thumb" data-search="fruit salad c/ pollo con pollo a la plancha o empanizado.">
+              <img src="/img/fruit-salad-sq.jpg" width="96" height="96" loading="lazy" alt="">
+              <div class="row-main">
+                <div class="row-head"><h4>Fruit Salad c/ Pollo</h4><span class="leader" aria-hidden="true"></span><span class="price">$140</span></div>
+                <p>Con pollo a la plancha o empanizado.</p>
+              </div>
+            </li>
+            <li class="row has-thumb" data-search="sopa azteca con proteína $120.">
+              <img src="/img/sopa-azteca-sq.jpg" width="96" height="96" loading="lazy" alt="">
+              <div class="row-main">
+                <div class="row-head"><h4>Sopa Azteca</h4><span class="leader" aria-hidden="true"></span><span class="price">$89</span></div>
+                <p>Con proteína $120.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="sandwiches" aria-labelledby="sandwiches-t">
+          <h3 class="cat-title" id="sandwiches-t">Sándwiches y Lonches</h3>
+          
+          <ul class="rows">
+            <li class="row" data-search="mr. webón huevo revuelto, tocino, jamón, chorizo, queso amarillo y maple. pan: cuernito o bollo.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Mr. Webón</h4><span class="leader" aria-hidden="true"></span><span class="price">$79</span></div>
+                
+              <p>Huevo revuelto, tocino, jamón, chorizo, queso amarillo y maple. Pan: cuernito o bollo.</p></div>
+            </li>
+            <li class="row" data-search="memito sándwich champiñón, cebolla, queso, tocino, huevo, jamón y salsa roja en pan de caja, con papa rallada.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Memito Sándwich</h4><span class="leader" aria-hidden="true"></span><span class="price">$99</span></div>
+                <p>Champiñón, cebolla, queso, tocino, huevo, jamón y salsa roja en pan de caja, con papa rallada.</p>
+              </div>
+            </li>
+            <li class="row" data-search="american sándwich huevo estrellado, pan integral, guacamole, queso, jamón, espinacas, papa rallada y tocino.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>American Sándwich</h4><span class="leader" aria-hidden="true"></span><span class="price">$110</span></div>
+                <p>Huevo estrellado, pan integral, guacamole, queso, jamón, espinacas, papa rallada y tocino.</p>
+              </div>
+            </li>
+            <li class="row" data-search="club sándwich ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Club Sándwich</h4><span class="leader" aria-hidden="true"></span><span class="price">$69</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="blt clásico ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>BLT Clásico</h4><span class="leader" aria-hidden="true"></span><span class="price">$59</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="patty melt carne de hamburguesa, tocino, cebolla caramelizada, champiñones, queso amarillo y jalapeño.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Patty Melt</h4><span class="leader" aria-hidden="true"></span><span class="price">$99</span></div>
+                <p>Carne de hamburguesa, tocino, cebolla caramelizada, champiñones, queso amarillo y jalapeño.</p>
+              </div>
+            </li>
+            <li class="row" data-search="waffle chicken / cubano ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Waffle Chicken / Cubano</h4><span class="leader" aria-hidden="true"></span><span class="price">$99</span></div>
+                
+              </div>
+            </li>
+          </ul>
+          <h4 class="sub-title">Lonches</h4>
+          <ul class="rows">
+            <li class="row" data-search="lonche de pierna ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Lonche de Pierna</h4><span class="leader" aria-hidden="true"></span><span class="price">$75</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="lonche de panela ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Lonche de Panela</h4><span class="leader" aria-hidden="true"></span><span class="price">$60</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="lonche de machaca ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Lonche de Machaca</h4><span class="leader" aria-hidden="true"></span><span class="price">$80</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="lonche de jamón ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Lonche de Jamón</h4><span class="leader" aria-hidden="true"></span><span class="price">$60</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="lonche de chuleta ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Lonche de Chuleta</h4><span class="leader" aria-hidden="true"></span><span class="price">$75</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="lonche mixto ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Lonche Mixto</h4><span class="leader" aria-hidden="true"></span><span class="price">$89</span></div>
+                
+              </div>
+            </li>
+            <li class="row has-thumb" data-search="lonche terminator pollo, tocino y dos huevos estrellados.">
+              <img src="/img/lonche-terminator-sq.jpg" width="96" height="96" loading="lazy" alt="">
+              <div class="row-main">
+                <div class="row-head"><h4>Lonche Terminator</h4><span class="leader" aria-hidden="true"></span><span class="price">$120</span></div>
+                <p>Pollo, tocino y dos huevos estrellados.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="burritos" aria-labelledby="burritos-t">
+          <h3 class="cat-title" id="burritos-t">Burritos y Quesadillas</h3>
+          
+          <ul class="rows">
+            <li class="row" data-search="burrito tradicional huevo, queso y dos ingredientes a elegir: tocino, jamón o chorizo.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Burrito Tradicional</h4><span class="leader" aria-hidden="true"></span><span class="price">$69</span></div>
+                <p>Huevo, queso y dos ingredientes a elegir: tocino, jamón o chorizo.</p>
+              </div>
+            </li>
+            <li class="row" data-search="burrito de pierna el tradicional de pierna.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Burrito de Pierna</h4><span class="leader" aria-hidden="true"></span><span class="price">$79</span></div>
+                <p>El tradicional de pierna.</p>
+              </div>
+            </li>
+            <li class="row" data-search="hamburger burro carne de hamburguesa, queso, vegetales, pepinillos, cátsup y mostaza.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Hamburger Burro</h4><span class="leader" aria-hidden="true"></span><span class="price">$79</span></div>
+                <p>Carne de hamburguesa, queso, vegetales, pepinillos, cátsup y mostaza.</p>
+              </div>
+            </li>
+            <li class="row" data-search="los juanchos (3) tortillas de harina rellenas de picadillo especial, bañadas en crema poblana.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Los Juanchos (3)</h4><span class="leader" aria-hidden="true"></span><span class="price">$89</span></div>
+                <p>Tortillas de harina rellenas de picadillo especial, bañadas en crema poblana.</p>
+              </div>
+            </li>
+            <li class="row" data-search="burrito tejano con frijoles, tocino y queso.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Burrito Tejano</h4><span class="leader" aria-hidden="true"></span><span class="price">$59</span></div>
+                <p>Con frijoles, tocino y queso.</p>
+              </div>
+            </li>
+            <li class="row" data-search="burrito de arrachera champiñones, cebolla en salsa verde, frijoles con queso y guacamole.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Burrito de Arrachera</h4><span class="leader" aria-hidden="true"></span><span class="price">$79</span></div>
+                <p>Champiñones, cebolla en salsa verde, frijoles con queso y guacamole.</p>
+              </div>
+            </li>
+            <li class="row" data-search="fajita quesadilla (2) vegetales salteados con queso en tortilla de harina, con guacamole. proteína: camarón, arrachera o pollo.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Fajita Quesadilla (2)</h4><span class="leader" aria-hidden="true"></span><span class="price">$89</span></div>
+                <p>Vegetales salteados con queso en tortilla de harina, con guacamole. Proteína: camarón, arrachera o pollo.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="snacks" aria-labelledby="snacks-t">
+          <h3 class="cat-title" id="snacks-t">Snacks</h3>
+          <p class="cat-note">Ingredientes extra: tocino, champiñón, BBQ y cebolla.</p>
+          <ul class="rows">
+            <li class="row" data-search="hamburguesa maximus res con tocino, huevo estrellado, tiras de cebolla crujientes y vegetales.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Hamburguesa Maximus</h4><span class="leader" aria-hidden="true"></span><span class="price">$139</span></div>
+                <p>Res con tocino, huevo estrellado, tiras de cebolla crujientes y vegetales.</p>
+              </div>
+            </li>
+            <li class="row" data-search="hamburguesa clásica res con tocino y queso.">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Hamburguesa Clásica</h4><span class="leader" aria-hidden="true"></span><span class="price">$89</span></div>
+                <p>Res con tocino y queso.</p>
+              </div>
+            </li>
+            <li class="row" data-search="hamburguesa de pollo ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Hamburguesa de Pollo</h4><span class="leader" aria-hidden="true"></span><span class="price">$85</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="hamburguesa de camarón ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Hamburguesa de Camarón</h4><span class="leader" aria-hidden="true"></span><span class="price">$89</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="hamburguesa vegetariana ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Hamburguesa Vegetariana</h4><span class="leader" aria-hidden="true"></span><span class="price">$79</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="hot dog ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Hot Dog</h4><span class="leader" aria-hidden="true"></span><span class="price">$40</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="hot dog chip ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Hot Dog Chip</h4><span class="leader" aria-hidden="true"></span><span class="price">$45</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="orden de papas ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Orden de Papas</h4><span class="leader" aria-hidden="true"></span><span class="price">$49</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="guacamole ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Guacamole</h4><span class="leader" aria-hidden="true"></span><span class="price">$49</span></div>
+                
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="group" id="g-bebidas">
+        <h3 class="group-title">Bebidas</h3>
+        <section class="cat" id="calientes" aria-labelledby="calientes-t">
+          <h3 class="cat-title" id="calientes-t">Calientes</h3>
+          <p class="cat-note">El café de la casa: americano y de olla incluyen 1 refill. Pregunta por nuestro delicioso pan del día.</p>
+          <ul class="rows">
+            <li class="row" data-search="café americano ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Café Americano</h4><span class="leader" aria-hidden="true"></span><span class="price">$50</span></div>
+                <p><span class="tag">1 refill</span> </p>
+              </div>
+            </li>
+            <li class="row has-thumb" data-search="café de olla ">
+              <img src="/img/cafe.jpg" width="96" height="96" loading="lazy" alt="">
+              <div class="row-main">
+                <div class="row-head"><h4>Café de Olla</h4><span class="leader" aria-hidden="true"></span><span class="price">$50</span></div>
+                <p><span class="tag">1 refill</span> </p>
+              </div>
+            </li>
+            <li class="row" data-search="café espresso ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Café Espresso</h4><span class="leader" aria-hidden="true"></span><span class="price">$40</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="chocolate ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Chocolate</h4><span class="leader" aria-hidden="true"></span><span class="price">$59</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="capuchino ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Capuchino</h4><span class="leader" aria-hidden="true"></span><span class="price">$60</span></div>
+                
+              </div>
+            </li><li class="row" data-search="capuchino moka o vainilla ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Capuchino Moka o Vainilla</h4><span class="leader" aria-hidden="true"></span><span class="price">$70</span></div>
+                
+              </div>
+            </li><li class="row" data-search="matcha ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Matcha</h4><span class="leader" aria-hidden="true"></span><span class="price">$59</span></div>
+                
+              </div>
+            </li><li class="row" data-search="té chai latte ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Té Chai Latte</h4><span class="leader" aria-hidden="true"></span><span class="price">$59</span></div>
+                
+              </div>
+            </li>
+            
+            
+            
+          <li class="row" data-search="té de variedades, frío o caliente ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Té de Variedades, Frío o Caliente</h4><span class="leader" aria-hidden="true"></span><span class="price">$40</span></div>
+                
+              </div>
+            </li></ul>
+        </section>
+        <section class="cat" id="jugos" aria-labelledby="jugos-t">
+          <h3 class="cat-title" id="jugos-t">Jugos y Aguas</h3>
+          
+          <ul class="rows">
+            <li class="row has-thumb" data-search="jugo de naranja ">
+              <img src="/img/jugo-naranja.jpg" width="96" height="96" loading="lazy" alt="">
+              <div class="row-main">
+                <div class="row-head"><h4>Jugo de Naranja</h4><span class="leader" aria-hidden="true"></span><span class="price">CH $50 · G $55</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="jugo verde ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Jugo Verde</h4><span class="leader" aria-hidden="true"></span><span class="price">CH $55 · G $60</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="agua fresca ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Agua Fresca</h4><span class="leader" aria-hidden="true"></span><span class="price">$29</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="limonada mineral o natural ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Limonada Mineral o Natural</h4><span class="leader" aria-hidden="true"></span><span class="price">$35</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="refrescos ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Refrescos</h4><span class="leader" aria-hidden="true"></span><span class="price">$29</span></div>
+                
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="especialidades" aria-labelledby="especialidades-t">
+          <h3 class="cat-title" id="especialidades-t">Especialidades</h3>
+          
+          <ul class="rows">
+            <li class="row" data-search="conga ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Conga</h4><span class="leader" aria-hidden="true"></span><span class="price">$59</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="very berry ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Very Berry</h4><span class="leader" aria-hidden="true"></span><span class="price">$59</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="all day energy ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>All Day Energy</h4><span class="leader" aria-hidden="true"></span><span class="price">$59</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="licuado mr. pankeke ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Licuado Mr. Pankeke</h4><span class="leader" aria-hidden="true"></span><span class="price">$59</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="frappé ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Frappé</h4><span class="leader" aria-hidden="true"></span><span class="price">CH $55 · G $65</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="frappé moka o vainilla ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Frappé Moka o Vainilla</h4><span class="leader" aria-hidden="true"></span><span class="price">CH $60 · G $70</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="malteadas ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Malteadas</h4><span class="leader" aria-hidden="true"></span><span class="price">$65</span></div>
+                
+              </div>
+            </li>
+            <li class="row" data-search="chocomilk ">
+              
+              <div class="row-main">
+                <div class="row-head"><h4>Chocomilk</h4><span class="leader" aria-hidden="true"></span><span class="price">CH $25 · G $45</span></div>
+                
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <p class="fineprint">Precios en MXN, incluyen IVA. Cambios en ingredientes o proteína extra tienen costo adicional. CH = chico · G = grande.</p>
+    </section>
+
+    <section class="section story" aria-labelledby="historia-title">
+      <div class="section-head">
+        <p class="eyebrow">Desde 2014</p>
+        <h2 id="historia-title">Nuestra historia</h2>
+      </div>
+      <img class="story-photo" src="/img/portada-600.jpg" srcset="/img/portada-600.jpg 600w, /img/portada-1200.jpg 1200w" sizes="(min-width: 900px) 62rem, 100vw" width="1200" height="900" loading="lazy" alt="Mesa de Mr. Pankeke con waffle de frutas y helado, pankekes, chilaquiles, jugo de naranja y café, frente a una pared de ladrillo.">
+      <p>En 2014 encendimos la plancha por primera vez. Más de diez años después seguimos aquí, sirviendo el desayuno de amigos y familias que nos vieron crecer. Gracias, Tepatitlán, por hacernos su lugar favorito y parte de sus mañanas.</p>
+      <p class="signature">— La familia Mr. Pankeke</p>
+    </section>
+
+    <section class="section" id="visitanos" aria-labelledby="visitanos-title">
+      <div class="section-head">
+        <p class="eyebrow">Vuelve pronto</p>
+        <h2 id="visitanos-title">Horario y ubicación</h2>
+      </div>
+      <div class="split">
+        <ul class="hours" id="hours">
+          <li data-day="1"><span>Lunes</span><span>8:00 – 14:00</span></li>
+          <li data-day="2"><span>Martes</span><span>8:00 – 14:00</span></li>
+          <li data-day="3"><span>Miércoles</span><span>8:00 – 14:00</span></li>
+          <li data-day="4"><span>Jueves</span><span>8:00 – 14:00</span></li>
+          <li data-day="5"><span>Viernes</span><span>8:00 – 14:00</span></li>
+          <li data-day="6"><span>Sábado</span><span>8:00 – 14:00</span></li>
+          <li data-day="0"><span>Domingo</span><span>8:00 – 14:00</span></li>
+        </ul>
+        <div>
+          <address class="address">
+            <strong>Toltecas 189</strong><br>
+            Tepatitlán de Morelos, Jalisco<br>
+            <span class="muted">Junto a Padel Punto Gana</span>
+          </address>
+          <div class="map">
+            <iframe title="Mapa de Mr. Pankeke en Toltecas 189, Tepatitlán" src="https://www.google.com/maps?q=Toltecas%20189%2C%20Tepatitl%C3%A1n%20de%20Morelos%2C%20Jalisco&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
+          </div>
+          <a class="btn btn-ghost btn-block" href="https://www.google.com/maps/dir/?api=1&amp;destination=Toltecas%20189%2C%20Tepatitl%C3%A1n%20de%20Morelos%2C%20Jalisco" target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img class="footer-logo" src="/img/logo.png" width="600" height="425" loading="lazy" alt="">
+    <p>Mr. Pankeke · Coffee + Breakfast</p>
+    <p>Toltecas 189, Tepatitlán, Jalisco · <a href="tel:+523781134686">378 113 4686</a></p>
+  </footer>
+
+
+</body></html>
