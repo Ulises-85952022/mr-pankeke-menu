@@ -5,10 +5,13 @@
   "scripts": {
     "build": "node scripts/build-index.mjs",
     "seed:kv": "node scripts/seed-kv.mjs",
-    "seed:kv:upload": "wrangler kv key put --binding MENU_KV --remote fotos --path .seed/fotos.json && wrangler kv key put --binding MENU_KV --remote favoritos --path .seed/favoritos.json"
+    "seed:kv:upload": "wrangler kv key put --binding MENU_KV --remote fotos --path .seed/fotos.json && wrangler kv key put --binding MENU_KV --remote favoritos --path .seed/favoritos.json",
+    "test": "vitest run"
   },
   "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "0.23.0",
     "node-html-parser": "7.0.1",
+    "vitest": "4.1.5",
     "wrangler": "4.152.0"
   }
 }
