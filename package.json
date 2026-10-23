@@ -1,0 +1,11 @@
+{
+  "name": "mr-pankeke-menu",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-index.mjs"
+  },
+  "devDependencies": {
+    "node-html-parser": "7.0.1"
+  }
+}
