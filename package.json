@@ -3,9 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-index.mjs"
+    "build": "node scripts/build-index.mjs",
+    "seed:kv": "node scripts/seed-kv.mjs",
+    "seed:kv:upload": "wrangler kv key put --binding MENU_KV --remote fotos --path .seed/fotos.json && wrangler kv key put --binding MENU_KV --remote favoritos --path .seed/favoritos.json"
   },
   "devDependencies": {
-    "node-html-parser": "7.0.1"
+    "node-html-parser": "7.0.1",
+    "wrangler": "4.152.0"
   }
 }
