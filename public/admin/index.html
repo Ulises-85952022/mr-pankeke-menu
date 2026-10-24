@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Panel · Mr. Pankeke</title>
+<meta name="theme-color" content="#1f2023">
+<style>
+:root{color-scheme:dark;--fondo:#1f2023;--tarjeta:#2a2b2f;--tiza:#f4efe6;--gris:#b5afa6;--naranja:#f2a33a;--error:#ff8a7a;--linea:rgba(244,239,230,.16)}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){color-scheme:light;--fondo:#f4efe6;--tarjeta:#fffdf8;--tiza:#1f2023;--gris:#5f5a52;--naranja:#c97a12;--error:#b3261e;--linea:rgba(31,32,35,.16)}}
+:root[data-theme="light"]{color-scheme:light;--fondo:#f4efe6;--tarjeta:#fffdf8;--tiza:#1f2023;--gris:#5f5a52;--naranja:#c97a12;--error:#b3261e;--linea:rgba(31,32,35,.16)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--fondo);color:var(--tiza);font-family:"Bebas Neue","Oswald","Arial Narrow",system-ui,sans-serif;
+  display:flex;align-items:center;justify-content:center;padding:24px 16px}
+main{width:100%;max-width:360px;background:var(--tarjeta);border:1px solid var(--linea);border-radius:14px;padding:28px 24px}
+h1{font-weight:400;font-size:24px;letter-spacing:.04em;margin:0 0 6px;text-align:center}
+.sub{margin:0 0 22px;text-align:center;color:var(--gris);font-size:14px;letter-spacing:.12em}
+label{display:block;font-size:13px;letter-spacing:.1em;color:var(--gris);margin-bottom:6px}
+input{width:100%;font:inherit;font-size:18px;padding:12px 14px;border-radius:10px;border:1px solid var(--linea);background:transparent;color:var(--tiza)}
+input:focus{outline:2px solid var(--naranja);outline-offset:1px}
+button{width:100%;margin-top:16px;font:inherit;font-size:18px;letter-spacing:.08em;padding:12px;border:0;border-radius:10px;background:var(--naranja);color:#1f2023;cursor:pointer}
+button:disabled{opacity:.6;cursor:default}
+.msg{min-height:22px;margin:14px 0 0;text-align:center;font-size:15px;color:var(--error)}
+.ok{color:var(--tiza)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main>
+  <div id="login">
+    <h1>MR. PANKEKE</h1>
+    <p class="sub">PANEL DEL MENÚ</p>
+    <form id="form" autocomplete="off">
+      <label for="clave">Clave</label>
+      <input id="clave" name="clave" type="password" required autocomplete="current-password">
+      <button id="entrar" type="submit">Entrar</button>
+      <p id="msg" class="msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+  <div id="dentro" hidden>
+    <h1>SESIÓN INICIADA</h1>
+    <p class="sub">EL EDITOR DEL MENÚ LLEGA EN LA SIGUIENTE FASE</p>
+  </div>
+</main>
+<script>
+(function () {
+  var form = document.getElementById('form');
+  var clave = document.getElementById('clave');
+  var boton = document.getElementById('entrar');
+  var msg = document.getElementById('msg');
+
+  function mostrarError(texto) { msg.className = 'msg'; msg.textContent = texto; }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    boton.disabled = true;
+    mostrarError('');
+    fetch('/api/login', {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ clave: clave.value })
+    }).then(function (r) {
+      if (r.ok) {
+        document.getElementById('login').hidden = true;
+        document.getElementById('dentro').hidden = false;
+        return;
+      }
+      if (r.status === 429) return mostrarError('Demasiados intentos. Espera 15 minutos.');
+      if (r.status === 401) return mostrarError('Clave incorrecta.');
+      mostrarError('No se pudo iniciar sesión. Intenta de nuevo.');
+    }).catch(function () {
+      mostrarError('Sin conexión. Revisa tu red e intenta de nuevo.');
+    }).then(function () {
+      boton.disabled = false;
+      clave.value = '';
+    });
+  });
+})();
+</script>
+</body>
+</html>

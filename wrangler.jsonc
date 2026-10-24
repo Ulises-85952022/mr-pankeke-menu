@@ -15,6 +15,7 @@
   ],
   "routes": [
     { "pattern": "mrpankeketepa.com", "custom_domain": true },
-    { "pattern": "www.mrpankeketepa.com", "custom_domain": true }
+    { "pattern": "www.mrpankeketepa.com", "custom_domain": true },
+    { "pattern": "admin.mrpankeketepa.com", "custom_domain": true }
   ]
 }

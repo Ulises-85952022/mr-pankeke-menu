@@ -32,6 +32,11 @@ export default {
       });
     }
 
+    // En el host del admin, la raíz es el login del panel (public/admin/).
+    if (url.hostname === 'admin.mrpankeketepa.com' && url.pathname === '/') {
+      return env.ASSETS.fetch(new Request(new URL('/admin/index.html', url), request));
+    }
+
     // Fotos subidas desde el panel: /fotos/<id>/<v>/<tamaño>.<ext> -> R2 platos/<id>/<v>/<tamaño>.<ext>
     if (url.pathname.startsWith('/fotos/')) {
       const obj = await env.FOTOS.get('platos/' + url.pathname.slice('/fotos/'.length));
