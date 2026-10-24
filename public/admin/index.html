@@ -176,12 +176,12 @@ button:disabled{opacity:.5;cursor:default}
     var precio = document.createElement("span");
     precio.className = "precio";
     precio.textContent = p.precio;
-    var estado = document.createElement("span");
-    estado.className = "estado";
+    var estadoEl = document.createElement("span");
+    estadoEl.className = "estado";
     datos.appendChild(nombre);
     datos.appendChild(document.createTextNode(" "));
     datos.appendChild(precio);
-    datos.appendChild(estado);
+    datos.appendChild(estadoEl);
 
     var controles = document.createElement("div");
     controles.className = "controles";
