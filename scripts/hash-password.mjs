@@ -13,10 +13,10 @@ const ITERACIONES = 100000;
 const SUBIR = process.argv.includes('--subir');
 const CERRAR_SESIONES = process.argv.includes('--cerrar-sesiones');
 
-function leerClave() {
+function leerClave(pregunta) {
   return new Promise((resolve, reject) => {
     if (!process.stdin.isTTY) return reject(new Error('Ejecútalo en una terminal interactiva.'));
-    process.stdout.write('Clave nueva: ');
+    process.stdout.write(pregunta);
     process.stdin.setRawMode(true);
     process.stdin.setEncoding('utf8');
     let clave = '';
@@ -53,7 +53,12 @@ function subirSecreto(nombre, valor) {
   console.log(`${nombre} actualizado en Cloudflare.`);
 }
 
-const clave = await leerClave();
+const clave = await leerClave('Clave nueva: ');
+const repite = await leerClave('Repite la clave: ');
+if (clave !== repite) {
+  console.error('Las claves no coinciden. No se subió nada.');
+  process.exit(1);
+}
 if (clave.length < 12) {
   console.error('La clave debe tener al menos 12 caracteres.');
   process.exit(1);
