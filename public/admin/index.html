@@ -12,71 +12,378 @@
 :root[data-theme="light"]{color-scheme:light;--fondo:#f4efe6;--tarjeta:#fffdf8;--tiza:#1f2023;--gris:#5f5a52;--naranja:#c97a12;--error:#b3261e;--linea:rgba(31,32,35,.16)}
 *{box-sizing:border-box}
 body{margin:0;min-height:100vh;background:var(--fondo);color:var(--tiza);font-family:"Bebas Neue","Oswald","Arial Narrow",system-ui,sans-serif;
-  display:flex;align-items:center;justify-content:center;padding:24px 16px}
-main{width:100%;max-width:360px;background:var(--tarjeta);border:1px solid var(--linea);border-radius:14px;padding:28px 24px}
+  display:flex;justify-content:center;align-items:flex-start;padding:24px 16px}
+main{width:100%;max-width:720px;background:var(--tarjeta);border:1px solid var(--linea);border-radius:14px;padding:28px 24px}
 h1{font-weight:400;font-size:24px;letter-spacing:.04em;margin:0 0 6px;text-align:center}
+h2.seccion{font-weight:400;font-size:18px;letter-spacing:.08em;margin:24px 0 8px;color:var(--naranja)}
 .sub{margin:0 0 22px;text-align:center;color:var(--gris);font-size:14px;letter-spacing:.12em}
+.ayuda{color:var(--gris);font-size:15px;margin:0 0 8px}
 label{display:block;font-size:13px;letter-spacing:.1em;color:var(--gris);margin-bottom:6px}
-input{width:100%;font:inherit;font-size:18px;padding:12px 14px;border-radius:10px;border:1px solid var(--linea);background:transparent;color:var(--tiza)}
-input:focus{outline:2px solid var(--naranja);outline-offset:1px}
-button{width:100%;margin-top:16px;font:inherit;font-size:18px;letter-spacing:.08em;padding:12px;border:0;border-radius:10px;background:var(--naranja);color:#1f2023;cursor:pointer}
-button:disabled{opacity:.6;cursor:default}
+input[type="password"]{width:100%;font:inherit;font-size:18px;padding:12px 14px;border-radius:10px;border:1px solid var(--linea);background:transparent;color:var(--tiza)}
+input:focus-visible,button:focus-visible{outline:2px solid var(--naranja);outline-offset:2px}
+button{font:inherit;font-size:16px;letter-spacing:.06em;padding:10px 16px;border:0;border-radius:10px;background:var(--naranja);color:#1f2023;cursor:pointer}
+button:disabled{opacity:.5;cursor:default}
+button.secundario{background:transparent;color:var(--tiza);border:1px solid var(--linea)}
+#form button{width:100%;margin-top:16px;font-size:18px;padding:12px}
 .msg{min-height:22px;margin:14px 0 0;text-align:center;font-size:15px;color:var(--error)}
-.ok{color:var(--tiza)}
+.cabecera{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.cabecera h1{text-align:left}
+.acciones{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.contador{color:var(--gris);font-size:15px;letter-spacing:.06em}
+.platos{list-style:none;margin:0;padding:0;border-top:1px solid var(--linea)}
+.plato{display:grid;grid-template-columns:64px 1fr auto;gap:12px 14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--linea)}
+.foto{width:64px;height:64px;border-radius:8px;overflow:hidden;background:var(--fondo);border:1px dashed var(--linea);display:flex;align-items:center;justify-content:center}
+.foto img{width:100%;height:100%;object-fit:cover}
+.plato.sin-foto .foto img{display:none}
+.plato:not(.sin-foto) .foto .sin{display:none}
+.sin{font-size:12px;color:var(--gris);text-align:center;padding:4px}
+.datos{min-width:0}
+.datos strong{font-weight:400;font-size:18px;letter-spacing:.03em;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.precio{color:var(--gris);font-size:15px}
+.estado{display:block;font-size:14px;color:var(--gris);min-height:18px}
+.estado.error{color:var(--error)}
+.controles{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.controles label{margin:0;display:flex;gap:6px;align-items:center;color:var(--tiza);font-size:15px;letter-spacing:.04em;cursor:pointer}
+.boton-foto{display:inline-block;margin:0;font-size:15px;letter-spacing:.04em;padding:8px 12px;border-radius:8px;border:1px solid var(--linea);color:var(--tiza);cursor:pointer;text-transform:none}
+.guardar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px}
+.guardar .msg{margin:0;text-align:left}
 [hidden]{display:none!important}
+@media (max-width:520px){
+  .plato{grid-template-columns:52px 1fr;}
+  .foto{width:52px;height:52px}
+  .controles{grid-column:1 / -1;flex-direction:row;justify-content:space-between;align-items:center}
+}
 </style>
 </head>
 <body>
 <main>
-  <div id="login">
+  <section id="login">
     <h1>MR. PANKEKE</h1>
     <p class="sub">PANEL DEL MENÚ</p>
     <form id="form" autocomplete="off">
       <label for="clave">Clave</label>
       <input id="clave" name="clave" type="password" required autocomplete="current-password">
       <button id="entrar" type="submit">Entrar</button>
-      <p id="msg" class="msg" role="status" aria-live="polite"></p>
+      <p id="msg-login" class="msg" role="status" aria-live="polite"></p>
     </form>
-  </div>
-  <div id="dentro" hidden>
-    <h1>SESIÓN INICIADA</h1>
-    <p class="sub">EL EDITOR DEL MENÚ LLEGA EN LA SIGUIENTE FASE</p>
-  </div>
+  </section>
+
+  <section id="editor" hidden>
+    <div class="cabecera">
+      <h1>MENÚ</h1>
+      <div class="acciones">
+        <button id="salir" type="button" class="secundario">Salir</button>
+      </div>
+    </div>
+    <p class="ayuda">Cambia la foto de cualquier platillo con su botón. Marca hasta 12 favoritos y guarda.</p>
+    <div id="lista"></div>
+    <div class="guardar">
+      <p id="msg-favs" class="msg" role="status" aria-live="polite"></p>
+      <div class="acciones">
+        <span id="contador" class="contador"></span>
+        <button id="guardar-favs" type="button">Guardar favoritos</button>
+      </div>
+    </div>
+  </section>
 </main>
 <script>
 (function () {
-  var form = document.getElementById('form');
-  var clave = document.getElementById('clave');
-  var boton = document.getElementById('entrar');
-  var msg = document.getElementById('msg');
+  "use strict";
+  var MAX_FAVORITOS = 12;
+  var MAX_LADO = 1200;
 
-  function mostrarError(texto) { msg.className = 'msg'; msg.textContent = texto; }
+  var login = document.getElementById("login");
+  var editor = document.getElementById("editor");
+  var form = document.getElementById("form");
+  var clave = document.getElementById("clave");
+  var entrar = document.getElementById("entrar");
+  var msgLogin = document.getElementById("msg-login");
+  var lista = document.getElementById("lista");
+  var msgFavs = document.getElementById("msg-favs");
+  var contador = document.getElementById("contador");
+  var guardarFavs = document.getElementById("guardar-favs");
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    boton.disabled = true;
-    mostrarError('');
-    fetch('/api/login', {
-      method: 'POST',
-      credentials: 'same-origin',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ clave: clave.value })
-    }).then(function (r) {
-      if (r.ok) {
-        document.getElementById('login').hidden = true;
-        document.getElementById('dentro').hidden = false;
+  var estado = { platos: [], fotos: {}, favs: [] };
+
+  function mostrarLogin(texto) {
+    editor.hidden = true;
+    login.hidden = false;
+    msgLogin.textContent = texto || "";
+  }
+
+  function mostrarEditor() {
+    login.hidden = true;
+    editor.hidden = false;
+  }
+
+  function esFavorito(id) {
+    return estado.favs.indexOf(id) !== -1;
+  }
+
+  function fotoUrl(id, v, tam) {
+    return "/fotos/" + id + "/" + v + "/" + tam + ".jpg";
+  }
+
+  // Convierte cualquier imagen a JPEG en las 3 medidas que espera el Worker. El thumb sale cuadrado y recortado al centro.
+  function cargarImagen(archivo) {
+    return new Promise(function (resolve, reject) {
+      var url = URL.createObjectURL(archivo);
+      var img = new Image();
+      img.onload = function () { URL.revokeObjectURL(url); resolve(img); };
+      img.onerror = function () { URL.revokeObjectURL(url); reject(new Error("No se pudo leer la imagen.")); };
+      img.src = url;
+    });
+  }
+
+  function versionJpeg(img, lado, cuadrada) {
+    var sx = 0, sy = 0, sw = img.naturalWidth, sh = img.naturalHeight, w, h;
+    if (cuadrada) {
+      var base = Math.min(sw, sh);
+      sx = (sw - base) / 2;
+      sy = (sh - base) / 2;
+      sw = base;
+      sh = base;
+      w = Math.min(lado, base);
+      h = w;
+    } else {
+      var escala = Math.min(1, lado / sw);
+      w = Math.round(sw * escala);
+      h = Math.round(sh * escala);
+    }
+    var canvas = document.createElement("canvas");
+    canvas.width = w;
+    canvas.height = h;
+    canvas.getContext("2d").drawImage(img, sx, sy, sw, sh, 0, 0, w, h);
+    return new Promise(function (resolve) { canvas.toBlob(resolve, "image/jpeg", 0.85); });
+  }
+
+  function prepararFotos(archivo) {
+    return cargarImagen(archivo).then(function (img) {
+      return Promise.all([versionJpeg(img, 192, true), versionJpeg(img, 600, false), versionJpeg(img, MAX_LADO, false)]);
+    }).then(function (b) {
+      return { thumb: b[0], "600": b[1], "1200": b[2] };
+    });
+  }
+
+  function setEstado(li, texto, esError) {
+    var s = li.querySelector(".estado");
+    s.textContent = texto;
+    s.classList.toggle("error", !!esError);
+  }
+
+  function pintarFoto(li, id, v) {
+    var img = li.querySelector("img");
+    li.classList.toggle("sin-foto", !v);
+    if (v) img.src = fotoUrl(id, v, "thumb") + "?v=" + v;
+    else img.removeAttribute("src");
+  }
+
+  function crearFila(p) {
+    var li = document.createElement("li");
+    li.className = "plato";
+    li.setAttribute("data-id", p.id);
+
+    var foto = document.createElement("div");
+    foto.className = "foto";
+    var img = document.createElement("img");
+    img.alt = "";
+    img.width = 64;
+    img.height = 64;
+    var sin = document.createElement("span");
+    sin.className = "sin";
+    sin.textContent = "Sin foto";
+    foto.appendChild(img);
+    foto.appendChild(sin);
+
+    var datos = document.createElement("div");
+    datos.className = "datos";
+    var nombre = document.createElement("strong");
+    nombre.textContent = p.nombre;
+    var precio = document.createElement("span");
+    precio.className = "precio";
+    precio.textContent = p.precio;
+    var estado = document.createElement("span");
+    estado.className = "estado";
+    datos.appendChild(nombre);
+    datos.appendChild(document.createTextNode(" "));
+    datos.appendChild(precio);
+    datos.appendChild(estado);
+
+    var controles = document.createElement("div");
+    controles.className = "controles";
+    var favLabel = document.createElement("label");
+    var fav = document.createElement("input");
+    fav.type = "checkbox";
+    fav.checked = esFavorito(p.id);
+    fav.addEventListener("change", function () { alternarFavorito(p.id, fav); });
+    favLabel.appendChild(fav);
+    favLabel.appendChild(document.createTextNode("Favorito"));
+
+    var fotoLabel = document.createElement("label");
+    fotoLabel.className = "boton-foto";
+    var file = document.createElement("input");
+    file.type = "file";
+    file.accept = "image/*";
+    file.hidden = true;
+    file.addEventListener("change", function () {
+      if (file.files && file.files[0]) subirFoto(p.id, li, file.files[0]);
+      file.value = "";
+    });
+    fotoLabel.appendChild(document.createTextNode("Cambiar foto"));
+    fotoLabel.appendChild(file);
+
+    controles.appendChild(favLabel);
+    controles.appendChild(fotoLabel);
+
+    li.appendChild(foto);
+    li.appendChild(datos);
+    li.appendChild(controles);
+    pintarFoto(li, p.id, estado.fotos[p.id] ? estado.fotos[p.id].v : 0);
+    return li;
+  }
+
+  function render(data) {
+    estado.platos = data.platos || [];
+    estado.fotos = data.fotos || {};
+    estado.favs = (data.favoritos || []).slice();
+    lista.textContent = "";
+
+    var grupos = {};
+    var orden = [];
+    estado.platos.forEach(function (p) {
+      if (!grupos[p.seccion]) {
+        grupos[p.seccion] = [];
+        orden.push(p.seccion);
+      }
+      grupos[p.seccion].push(p);
+    });
+    orden.forEach(function (seccion) {
+      var h = document.createElement("h2");
+      h.className = "seccion";
+      h.textContent = seccion;
+      lista.appendChild(h);
+      var ul = document.createElement("ul");
+      ul.className = "platos";
+      grupos[seccion].forEach(function (p) { ul.appendChild(crearFila(p)); });
+      lista.appendChild(ul);
+    });
+    actualizarContador();
+  }
+
+  function actualizarContador() {
+    var lleno = estado.favs.length >= MAX_FAVORITOS;
+    contador.textContent = estado.favs.length + " de " + MAX_FAVORITOS + " favoritos";
+    lista.querySelectorAll('input[type="checkbox"]').forEach(function (cb) {
+      if (!cb.checked) cb.disabled = lleno;
+    });
+  }
+
+  function alternarFavorito(id, cb) {
+    if (cb.checked) {
+      if (estado.favs.length >= MAX_FAVORITOS) {
+        cb.checked = false;
         return;
       }
-      if (r.status === 429) return mostrarError('Demasiados intentos. Espera 15 minutos.');
-      if (r.status === 401) return mostrarError('Clave incorrecta.');
-      mostrarError('No se pudo iniciar sesión. Intenta de nuevo.');
-    }).catch(function () {
-      mostrarError('Sin conexión. Revisa tu red e intenta de nuevo.');
+      estado.favs.push(id);
+    } else {
+      estado.favs = estado.favs.filter(function (x) { return x !== id; });
+    }
+    msgFavs.textContent = "";
+    actualizarContador();
+  }
+
+  function volverALogin(texto) {
+    mostrarLogin(texto || "Tu sesión terminó. Vuelve a entrar.");
+  }
+
+  function subirFoto(id, li, archivo) {
+    setEstado(li, "Preparando la foto…");
+    prepararFotos(archivo).then(function (versiones) {
+      var fd = new FormData();
+      fd.append("thumb", versiones.thumb, "thumb.jpg");
+      fd.append("600", versiones["600"], "600.jpg");
+      fd.append("1200", versiones["1200"], "1200.jpg");
+      setEstado(li, "Subiendo…");
+      return fetch("/api/fotos/" + encodeURIComponent(id), { method: "POST", credentials: "same-origin", body: fd });
+    }).then(function (r) {
+      if (r.status === 401) return volverALogin();
+      return r.json().then(function (d) {
+        if (!r.ok) throw new Error(d.error || "No se pudo subir la foto.");
+        estado.fotos[id] = { v: d.v };
+        pintarFoto(li, id, d.v);
+        setEstado(li, "Foto actualizada.");
+      });
+    }).catch(function (err) {
+      setEstado(li, err.message || "Error al subir la foto.", true);
+    });
+  }
+
+  guardarFavs.addEventListener("click", function () {
+    var ordenados = estado.platos.map(function (p) { return p.id; }).filter(esFavorito);
+    if (!ordenados.length) {
+      msgFavs.textContent = "Elige al menos un favorito.";
+      return;
+    }
+    guardarFavs.disabled = true;
+    msgFavs.textContent = "Guardando…";
+    fetch("/api/favoritos", {
+      method: "PUT",
+      credentials: "same-origin",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items: ordenados })
+    }).then(function (r) {
+      if (r.status === 401) return volverALogin();
+      return r.json().then(function (d) {
+        if (!r.ok) throw new Error(d.error || "No se pudieron guardar los favoritos.");
+        msgFavs.textContent = "Favoritos guardados.";
+      });
+    }).catch(function (err) {
+      msgFavs.textContent = err.message || "Error al guardar.";
     }).then(function () {
-      boton.disabled = false;
-      clave.value = '';
+      guardarFavs.disabled = false;
     });
   });
+
+  document.getElementById("salir").addEventListener("click", function () {
+    fetch("/api/logout", { method: "POST", credentials: "same-origin" }).finally(function () {
+      mostrarLogin("Sesión cerrada.");
+    });
+  });
+
+  function cargarMenu() {
+    return fetch("/api/menu", { credentials: "same-origin" }).then(function (r) {
+      if (!r.ok) throw new Error("sin sesión");
+      return r.json();
+    }).then(function (d) {
+      render(d);
+      mostrarEditor();
+    });
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    entrar.disabled = true;
+    msgLogin.textContent = "";
+    fetch("/api/login", {
+      method: "POST",
+      credentials: "same-origin",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ clave: clave.value })
+    }).then(function (r) {
+      if (r.ok) return cargarMenu().catch(function () { mostrarLogin("No se pudo cargar el menú."); });
+      if (r.status === 429) return mostrarLogin("Demasiados intentos. Espera 15 minutos.");
+      if (r.status === 401) return mostrarLogin("Clave incorrecta.");
+      mostrarLogin("No se pudo iniciar sesión. Intenta de nuevo.");
+    }).catch(function () {
+      mostrarLogin("Sin conexión. Revisa tu red e intenta de nuevo.");
+    }).then(function () {
+      entrar.disabled = false;
+      clave.value = "";
+    });
+  });
+
+  // Si la sesión sigue activa, entra directo al editor.
+  cargarMenu().catch(function () { mostrarLogin(""); });
 })();
 </script>
 </body>

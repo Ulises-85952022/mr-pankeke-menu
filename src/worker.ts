@@ -1,4 +1,5 @@
 import { login, logout, origenPermitido, sesionValida, type AuthEnv } from './auth';
+import { datosPublicos, guardarFavoritos, obtenerMenu, subirFoto } from './menu';
 
 export interface Env extends AuthEnv {
   ASSETS: Fetcher;
@@ -25,12 +26,18 @@ export default {
           headers: { 'Content-Type': 'application/json; charset=utf-8' },
         });
       }
-      // Las rutas de fotos y favoritos llegan en la Fase 4.
+      if (url.pathname === '/api/menu' && request.method === 'GET') return obtenerMenu(env);
+      if (url.pathname === '/api/favoritos' && request.method === 'PUT') return guardarFavoritos(request, env);
+      const foto = url.pathname.match(/^\/api\/fotos\/([^/]+)$/);
+      if (foto && request.method === 'POST') return subirFoto(request, env, decodeURIComponent(foto[1]));
       return new Response(JSON.stringify({ error: 'No encontrado' }), {
         status: 404,
         headers: { 'Content-Type': 'application/json; charset=utf-8' },
       });
     }
+
+    // Fotos y favoritos para el sitio público. Sin /api/ para que no pida la cabecera de origen del admin.
+    if (url.pathname === '/datos-menu.json' && request.method === 'GET') return datosPublicos(env);
 
     // En el host del admin, la raíz es el login del panel (public/admin/).
     if (url.hostname === 'admin.mrpankeketepa.com' && url.pathname === '/') {
