@@ -14,20 +14,15 @@
 body{margin:0;min-height:100vh;background:var(--fondo);color:var(--tiza);font-family:"Bebas Neue","Oswald","Arial Narrow",system-ui,sans-serif;
   display:flex;justify-content:center;align-items:flex-start;padding:24px 16px}
 main{width:100%;max-width:720px;background:var(--tarjeta);border:1px solid var(--linea);border-radius:14px;padding:28px 24px}
-h1{font-weight:400;font-size:24px;letter-spacing:.04em;margin:0 0 6px;text-align:center}
+h1{font-weight:400;font-size:24px;letter-spacing:.04em;margin:0 0 6px}
 h2.seccion{font-weight:400;font-size:18px;letter-spacing:.08em;margin:24px 0 8px;color:var(--naranja)}
-.sub{margin:0 0 22px;text-align:center;color:var(--gris);font-size:14px;letter-spacing:.12em}
 .ayuda{color:var(--gris);font-size:15px;margin:0 0 8px}
-label{display:block;font-size:13px;letter-spacing:.1em;color:var(--gris);margin-bottom:6px}
-input[type="password"]{width:100%;font:inherit;font-size:18px;padding:12px 14px;border-radius:10px;border:1px solid var(--linea);background:transparent;color:var(--tiza)}
-input:focus-visible,button:focus-visible{outline:2px solid var(--naranja);outline-offset:2px}
-button{font:inherit;font-size:16px;letter-spacing:.06em;padding:10px 16px;border:0;border-radius:10px;background:var(--naranja);color:#1f2023;cursor:pointer}
+input:focus-visible,button:focus-visible,label:focus-within{outline:2px solid var(--naranja);outline-offset:2px}
+button,.enlace{font:inherit;font-size:16px;letter-spacing:.06em;padding:10px 16px;border:0;border-radius:10px;background:var(--naranja);color:#1f2023;cursor:pointer;text-decoration:none;display:inline-block}
 button:disabled{opacity:.5;cursor:default}
-button.secundario{background:transparent;color:var(--tiza);border:1px solid var(--linea)}
-#form button{width:100%;margin-top:16px;font-size:18px;padding:12px}
-.msg{min-height:22px;margin:14px 0 0;text-align:center;font-size:15px;color:var(--error)}
+.secundario{background:transparent;color:var(--tiza);border:1px solid var(--linea)}
+.msg{min-height:22px;margin:14px 0 0;text-align:left;font-size:15px;color:var(--error)}
 .cabecera{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}
-.cabecera h1{text-align:left}
 .acciones{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .contador{color:var(--gris);font-size:15px;letter-spacing:.06em}
 .platos{list-style:none;margin:0;padding:0;border-top:1px solid var(--linea)}
@@ -43,13 +38,13 @@ button.secundario{background:transparent;color:var(--tiza);border:1px solid var(
 .estado{display:block;font-size:14px;color:var(--gris);min-height:18px}
 .estado.error{color:var(--error)}
 .controles{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
-.controles label{margin:0;display:flex;gap:6px;align-items:center;color:var(--tiza);font-size:15px;letter-spacing:.04em;cursor:pointer}
-.boton-foto{display:inline-block;margin:0;font-size:15px;letter-spacing:.04em;padding:8px 12px;border-radius:8px;border:1px solid var(--linea);color:var(--tiza);cursor:pointer;text-transform:none}
+.controles label{margin:0;display:flex;gap:6px;align-items:center;font-size:15px;letter-spacing:.04em;cursor:pointer}
+.boton-foto{display:inline-block;margin:0;font-size:15px;letter-spacing:.04em;padding:8px 12px;border-radius:8px;border:1px solid var(--linea);cursor:pointer}
 .guardar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px}
-.guardar .msg{margin:0;text-align:left}
+.guardar .msg{margin:0}
 [hidden]{display:none!important}
 @media (max-width:520px){
-  .plato{grid-template-columns:52px 1fr;}
+  .plato{grid-template-columns:52px 1fr}
   .foto{width:52px;height:52px}
   .controles{grid-column:1 / -1;flex-direction:row;justify-content:space-between;align-items:center}
 }
@@ -57,22 +52,11 @@ button.secundario{background:transparent;color:var(--tiza);border:1px solid var(
 </head>
 <body>
 <main>
-  <section id="login">
-    <h1>MR. PANKEKE</h1>
-    <p class="sub">PANEL DEL MENÚ</p>
-    <form id="form" autocomplete="off">
-      <label for="clave">Clave</label>
-      <input id="clave" name="clave" type="password" required autocomplete="current-password">
-      <button id="entrar" type="submit">Entrar</button>
-      <p id="msg-login" class="msg" role="status" aria-live="polite"></p>
-    </form>
-  </section>
-
   <section id="editor" hidden>
     <div class="cabecera">
       <h1>MENÚ</h1>
       <div class="acciones">
-        <button id="salir" type="button" class="secundario">Salir</button>
+        <a class="enlace secundario" href="/cdn-cgi/access/logout">Salir</a>
       </div>
     </div>
     <p class="ayuda">Cambia la foto de cualquier platillo con su botón. Marca hasta 12 favoritos y guarda.</p>
@@ -85,6 +69,11 @@ button.secundario{background:transparent;color:var(--tiza);border:1px solid var(
       </div>
     </div>
   </section>
+
+  <section id="sin-acceso" hidden>
+    <h1>SIN ACCESO</h1>
+    <p class="ayuda">Tu correo no tiene permiso para este panel. Pide que te den acceso o entra con tu cuenta autorizada.</p>
+  </section>
 </main>
 <script>
 (function () {
@@ -92,29 +81,14 @@ button.secundario{background:transparent;color:var(--tiza);border:1px solid var(
   var MAX_FAVORITOS = 12;
   var MAX_LADO = 1200;
 
-  var login = document.getElementById("login");
   var editor = document.getElementById("editor");
-  var form = document.getElementById("form");
-  var clave = document.getElementById("clave");
-  var entrar = document.getElementById("entrar");
-  var msgLogin = document.getElementById("msg-login");
+  var sinAcceso = document.getElementById("sin-acceso");
   var lista = document.getElementById("lista");
   var msgFavs = document.getElementById("msg-favs");
   var contador = document.getElementById("contador");
   var guardarFavs = document.getElementById("guardar-favs");
 
   var estado = { platos: [], fotos: {}, favs: [] };
-
-  function mostrarLogin(texto) {
-    editor.hidden = true;
-    login.hidden = false;
-    msgLogin.textContent = texto || "";
-  }
-
-  function mostrarEditor() {
-    login.hidden = true;
-    editor.hidden = false;
-  }
 
   function esFavorito(id) {
     return estado.favs.indexOf(id) !== -1;
@@ -292,10 +266,6 @@ button.secundario{background:transparent;color:var(--tiza);border:1px solid var(
     actualizarContador();
   }
 
-  function volverALogin(texto) {
-    mostrarLogin(texto || "Tu sesión terminó. Vuelve a entrar.");
-  }
-
   function subirFoto(id, li, archivo) {
     setEstado(li, "Preparando la foto…");
     prepararFotos(archivo).then(function (versiones) {
@@ -306,7 +276,6 @@ button.secundario{background:transparent;color:var(--tiza);border:1px solid var(
       setEstado(li, "Subiendo…");
       return fetch("/api/fotos/" + encodeURIComponent(id), { method: "POST", credentials: "same-origin", body: fd });
     }).then(function (r) {
-      if (r.status === 401) return volverALogin();
       return r.json().then(function (d) {
         if (!r.ok) throw new Error(d.error || "No se pudo subir la foto.");
         estado.fotos[id] = { v: d.v };
@@ -332,7 +301,6 @@ button.secundario{background:transparent;color:var(--tiza);border:1px solid var(
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ items: ordenados })
     }).then(function (r) {
-      if (r.status === 401) return volverALogin();
       return r.json().then(function (d) {
         if (!r.ok) throw new Error(d.error || "No se pudieron guardar los favoritos.");
         msgFavs.textContent = "Favoritos guardados.";
@@ -344,46 +312,19 @@ button.secundario{background:transparent;color:var(--tiza);border:1px solid var(
     });
   });
 
-  document.getElementById("salir").addEventListener("click", function () {
-    fetch("/api/logout", { method: "POST", credentials: "same-origin" }).finally(function () {
-      mostrarLogin("Sesión cerrada.");
-    });
-  });
-
   function cargarMenu() {
     return fetch("/api/menu", { credentials: "same-origin" }).then(function (r) {
-      if (!r.ok) throw new Error("sin sesión");
+      if (!r.ok) throw new Error("sin acceso");
       return r.json();
     }).then(function (d) {
       render(d);
-      mostrarEditor();
+      editor.hidden = false;
+    }).catch(function () {
+      sinAcceso.hidden = false;
     });
   }
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    entrar.disabled = true;
-    msgLogin.textContent = "";
-    fetch("/api/login", {
-      method: "POST",
-      credentials: "same-origin",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ clave: clave.value })
-    }).then(function (r) {
-      if (r.ok) return cargarMenu().catch(function () { mostrarLogin("No se pudo cargar el menú."); });
-      if (r.status === 429) return mostrarLogin("Demasiados intentos. Espera 15 minutos.");
-      if (r.status === 401) return mostrarLogin("Clave incorrecta.");
-      mostrarLogin("No se pudo iniciar sesión. Intenta de nuevo.");
-    }).catch(function () {
-      mostrarLogin("Sin conexión. Revisa tu red e intenta de nuevo.");
-    }).then(function () {
-      entrar.disabled = false;
-      clave.value = "";
-    });
-  });
-
-  // Si la sesión sigue activa, entra directo al editor.
-  cargarMenu().catch(function () { mostrarLogin(""); });
+  cargarMenu();
 })();
 </script>
 </body>
