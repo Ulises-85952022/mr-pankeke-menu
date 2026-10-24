@@ -1,3 +1,4 @@
 node_modules/
 .seed/
 .wrangler/
+# prueba de disparador de build (Workers Builds, rutas **)
