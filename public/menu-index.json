@@ -552,8 +552,16 @@
     "foto": null
   },
   {
-    "id": "waffle-chicken-cubano",
-    "nombre": "Waffle Chicken / Cubano",
+    "id": "waffle-cubano",
+    "nombre": "Waffle Cubano",
+    "precio": "$99",
+    "descripcion": "",
+    "seccion": "Sándwiches y Lonches",
+    "foto": null
+  },
+  {
+    "id": "waffle-chicken",
+    "nombre": "Waffle Chicken",
     "precio": "$99",
     "descripcion": "",
     "seccion": "Sándwiches y Lonches",
@@ -620,7 +628,7 @@
     "nombre": "Burrito Tradicional",
     "precio": "$69",
     "descripcion": "Huevo, queso y dos ingredientes a elegir: tocino, jamón o chorizo.",
-    "seccion": "Burritos y Quesadillas",
+    "seccion": "Burritos",
     "foto": null
   },
   {
@@ -628,7 +636,7 @@
     "nombre": "Burrito de Pierna",
     "precio": "$79",
     "descripcion": "El tradicional de pierna.",
-    "seccion": "Burritos y Quesadillas",
+    "seccion": "Burritos",
     "foto": null
   },
   {
@@ -636,7 +644,7 @@
     "nombre": "Hamburger Burro",
     "precio": "$79",
     "descripcion": "Carne de hamburguesa, queso, vegetales, pepinillos, cátsup y mostaza.",
-    "seccion": "Burritos y Quesadillas",
+    "seccion": "Burritos",
     "foto": null
   },
   {
@@ -644,7 +652,7 @@
     "nombre": "Los Juanchos (3)",
     "precio": "$89",
     "descripcion": "Tortillas de harina rellenas de picadillo especial, bañadas en crema poblana.",
-    "seccion": "Burritos y Quesadillas",
+    "seccion": "Burritos",
     "foto": null
   },
   {
@@ -652,7 +660,7 @@
     "nombre": "Burrito Tejano",
     "precio": "$59",
     "descripcion": "Con frijoles, tocino y queso.",
-    "seccion": "Burritos y Quesadillas",
+    "seccion": "Burritos",
     "foto": null
   },
   {
@@ -660,7 +668,7 @@
     "nombre": "Burrito de Arrachera",
     "precio": "$79",
     "descripcion": "Champiñones, cebolla en salsa verde, frijoles con queso y guacamole.",
-    "seccion": "Burritos y Quesadillas",
+    "seccion": "Burritos",
     "foto": null
   },
   {
@@ -668,7 +676,7 @@
     "nombre": "Fajita Quesadilla (2)",
     "precio": "$89",
     "descripcion": "Vegetales salteados con queso en tortilla de harina, con guacamole. Proteína: camarón, arrachera o pollo.",
-    "seccion": "Burritos y Quesadillas",
+    "seccion": "Burritos",
     "foto": null
   },
   {
