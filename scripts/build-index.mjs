@@ -42,12 +42,14 @@ for (const row of rows) {
   const p = row.querySelector('p');
   let descripcion = p ? p.text : '';
   if (p && tag) descripcion = descripcion.replace(tag.text, '');
+  const img = row.querySelector('img');
   entries.push({
     id,
     nombre,
     precio: row.querySelector('.price').text.trim(),
     descripcion: descripcion.replace(/\s+/g, ' ').trim(),
     seccion: section,
+    foto: img ? img.getAttribute('src') : null,
   });
 }
 
@@ -58,6 +60,10 @@ for (const fav of favs) {
   const id = byName.get(nameKey(nombre));
   if (!id) throw new Error(`favorito sin platillo en el menú: "${nombre}"`);
   fav.setAttribute('data-id', id);
+  // Si el platillo no tiene foto en su fila, usa la del favorito.
+  const entrada = entries.find(e => e.id === id);
+  const fotoFav = fav.querySelector('img');
+  if (entrada && !entrada.foto && fotoFav) entrada.foto = fotoFav.getAttribute('src');
 }
 
 if (new Set(entries.map(e => e.id)).size !== entries.length) throw new Error('ids repetidos en menu-index');

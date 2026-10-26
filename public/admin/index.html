@@ -26,28 +26,35 @@ button:disabled{opacity:.5;cursor:default}
 .acciones{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .contador{color:var(--gris);font-size:15px;letter-spacing:.06em}
 .platos{list-style:none;margin:0;padding:0;border-top:1px solid var(--linea)}
-.plato{display:grid;grid-template-columns:64px 1fr auto;gap:12px 14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--linea)}
-.foto{width:64px;height:64px;border-radius:8px;overflow:hidden;background:var(--fondo);border:1px dashed var(--linea);display:flex;align-items:center;justify-content:center}
+.plato{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--linea)}
+.foto{width:72px;height:72px;border-radius:10px;overflow:hidden;background:var(--fondo);border:1px dashed var(--linea);display:flex;align-items:center;justify-content:center}
 .foto img{width:100%;height:100%;object-fit:cover}
 .plato.sin-foto .foto img{display:none}
 .plato:not(.sin-foto) .foto .sin{display:none}
-.sin{font-size:12px;color:var(--gris);text-align:center;padding:4px}
+.sin{font-size:11px;color:var(--gris);text-align:center;padding:4px;white-space:nowrap}
 .datos{min-width:0}
-.datos strong{font-weight:400;font-size:18px;letter-spacing:.03em;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.precio{color:var(--gris);font-size:15px}
+.cabeza{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.datos strong{font-weight:400;font-size:19px;letter-spacing:.03em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.precio{color:var(--gris);font-size:16px;white-space:nowrap}
+.marca{margin:0 0 2px;color:var(--naranja);font-size:13px;letter-spacing:.14em}
 .estado{display:block;font-size:14px;color:var(--gris);min-height:18px}
 .estado.error{color:var(--error)}
-.controles{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
-.controles label{margin:0;display:flex;gap:6px;align-items:center;font-size:15px;letter-spacing:.04em;cursor:pointer}
-.boton-foto{display:inline-block;margin:0;font-size:15px;letter-spacing:.04em;padding:8px 12px;border-radius:8px;border:1px solid var(--linea);cursor:pointer}
-.guardar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px}
+.controles{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.pill{position:relative;display:inline-flex;align-items:center;gap:6px;margin:0;font-size:15px;letter-spacing:.04em;padding:7px 14px;border-radius:999px;border:1px solid var(--linea);cursor:pointer}
+.pill input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.pill:has(input:checked){background:var(--naranja);color:#1f2023;border-color:var(--naranja)}
+.pill:has(input:disabled){opacity:.45;cursor:default}
+.pill:focus-within{outline:2px solid var(--naranja);outline-offset:2px}
+.pill:hover{border-color:var(--naranja)}
+.guardar{position:sticky;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:20px -24px -28px;padding:14px 24px;background:var(--tarjeta);border-top:1px solid var(--linea);border-radius:0 0 14px 14px}
 .guardar .msg{margin:0}
 #buscar{width:100%;font:inherit;font-size:16px;padding:10px 12px;margin:4px 0 4px;border-radius:10px;border:1px solid var(--linea);background:transparent;color:var(--tiza)}
 [hidden]{display:none!important}
 @media (max-width:520px){
-  .plato{grid-template-columns:52px 1fr}
-  .foto{width:52px;height:52px}
-  .controles{grid-column:1 / -1;flex-direction:row;justify-content:space-between;align-items:center}
+  main{padding:20px 16px}
+  .guardar{margin:16px -16px -20px;padding:12px 16px}
+  .plato{grid-template-columns:64px 1fr;gap:12px}
+  .foto{width:64px;height:64px}
 }
 </style>
 </head>
@@ -55,7 +62,10 @@ button:disabled{opacity:.5;cursor:default}
 <main>
   <section id="editor" hidden>
     <div class="cabecera">
-      <h1>MENÚ</h1>
+      <div>
+        <p class="marca">MR. PANKEKE · PANEL</p>
+        <h1>Menú</h1>
+      </div>
       <div class="acciones">
         <a class="enlace secundario" href="/cdn-cgi/access/logout">Salir</a>
       </div>
@@ -164,10 +174,12 @@ button:disabled{opacity:.5;cursor:default}
     s.classList.toggle("error", !!esError);
   }
 
-  function pintarFoto(li, id, v) {
+  // Muestra la foto subida desde el panel; si no hay, la que ya trae el menú.
+  function pintarFoto(li, id, v, fotoActual) {
     var img = li.querySelector("img");
-    li.classList.toggle("sin-foto", !v);
+    li.classList.toggle("sin-foto", !v && !fotoActual);
     if (v) img.src = fotoUrl(id, v, "thumb") + "?v=" + v;
+    else if (fotoActual) img.src = fotoActual;
     else img.removeAttribute("src");
   }
 
@@ -198,14 +210,17 @@ button:disabled{opacity:.5;cursor:default}
     precio.textContent = p.precio;
     var estadoEl = document.createElement("span");
     estadoEl.className = "estado";
-    datos.appendChild(nombre);
-    datos.appendChild(document.createTextNode(" "));
-    datos.appendChild(precio);
+    var cabeza = document.createElement("div");
+    cabeza.className = "cabeza";
+    cabeza.appendChild(nombre);
+    cabeza.appendChild(precio);
+    datos.appendChild(cabeza);
     datos.appendChild(estadoEl);
 
     var controles = document.createElement("div");
     controles.className = "controles";
     var favLabel = document.createElement("label");
+    favLabel.className = "pill";
     var fav = document.createElement("input");
     fav.type = "checkbox";
     fav.checked = esFavorito(p.id);
@@ -214,7 +229,7 @@ button:disabled{opacity:.5;cursor:default}
     favLabel.appendChild(document.createTextNode("Favorito"));
 
     var fotoLabel = document.createElement("label");
-    fotoLabel.className = "boton-foto";
+    fotoLabel.className = "pill";
     var file = document.createElement("input");
     file.type = "file";
     file.accept = "image/*";
@@ -230,9 +245,9 @@ button:disabled{opacity:.5;cursor:default}
     controles.appendChild(fotoLabel);
 
     li.appendChild(foto);
+    datos.appendChild(controles);
     li.appendChild(datos);
-    li.appendChild(controles);
-    pintarFoto(li, p.id, estado.fotos[p.id] ? estado.fotos[p.id].v : 0);
+    pintarFoto(li, p.id, estado.fotos[p.id] ? estado.fotos[p.id].v : 0, p.foto);
     return li;
   }
 

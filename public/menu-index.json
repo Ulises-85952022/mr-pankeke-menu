@@ -4,804 +4,919 @@
     "nombre": "Tradicionales",
     "precio": "$99",
     "descripcion": "2 pancakes, mantequilla y maple.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": null
   },
   {
     "id": "taco-keke",
     "nombre": "Taco-Keke",
     "precio": "$110",
     "descripcion": "1 pancake grande relleno de yogurt, berries y cereal.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": "/img/taco-keke-sq.jpg"
   },
   {
     "id": "volteado-de-platano",
     "nombre": "Volteado de Plátano",
     "precio": "$120",
     "descripcion": "3 pancakes con plátano caramelizado y helado de vainilla.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": null
   },
   {
     "id": "choco-keke",
     "nombre": "Choco-Keke",
     "precio": "$115",
     "descripcion": "3 pancakes rellenos de chocolate y helado.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": "/img/choco-keke-sq.jpg"
   },
   {
     "id": "pankeke-vegano",
     "nombre": "Pankeke Vegano",
     "precio": "1 pz $66 · 2 pzs $91 · 3 pzs $114",
     "descripcion": "Pankeke de avena, crema de cacahuate, mermelada de frambuesa, frutos rojos, cereales y crema batida.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": null
   },
   {
     "id": "canela-roll",
     "nombre": "Canela Roll",
     "precio": "$120",
     "descripcion": "3 pancakes con cajeta, manzana caramelizada, blueberries y helado al gusto.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": null
   },
   {
     "id": "happy-face",
     "nombre": "Happy Face",
     "precio": "$79",
     "descripcion": "Carita feliz de fresa y plátano, lechera y crema batida.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": null
   },
   {
     "id": "sweet-pink-cake",
     "nombre": "Sweet Pink Cake",
     "precio": "$120",
     "descripcion": "3 pancakes con chantilly, fresas caramelizadas y almendras.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": null
   },
   {
     "id": "pan-frances-tradicional",
     "nombre": "Pan Francés Tradicional",
     "precio": "$99",
     "descripcion": "2 rebanadas sencillas.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": null
   },
   {
     "id": "pan-frances-c-salchicha-o-fruta",
     "nombre": "Pan Francés c/ Salchicha o Fruta",
     "precio": "$120",
     "descripcion": "Con salchicha, tocino o fruta a su elección.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": null
   },
   {
     "id": "sandwich-frances",
     "nombre": "Sándwich Francés",
     "precio": "$120",
     "descripcion": "Brioche relleno de queso crema, fresas, nuez, crema batida, almendras y lechera.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": null
   },
   {
     "id": "integral-honey-nuts",
     "nombre": "Integral Honey Nuts",
     "precio": "$120",
     "descripcion": "Harina integral, cereales, helado de vainilla y nuez.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": null
   },
   {
     "id": "waffles-mixtos",
     "nombre": "Waffles Mixtos",
     "precio": "$120",
     "descripcion": "Waffles dorados con chantilly y fruta a elección.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": null
   },
   {
     "id": "waffles-frutos-rojos",
     "nombre": "Waffles Frutos Rojos",
     "precio": "$130",
     "descripcion": "Waffles dorados con chantilly y berries.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": null
   },
   {
     "id": "waffle-de-avena",
     "nombre": "Waffle de Avena",
     "precio": "$130",
     "descripcion": "Con harina de plátano y avena.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": null
   },
   {
     "id": "sunshine-waffle",
     "nombre": "Sunshine Waffle",
     "precio": "$130",
     "descripcion": "Waffle de avena, helado de vainilla, fresas, cajeta y canela.",
-    "seccion": "Pankekes y Waffles"
+    "seccion": "Pankekes y Waffles",
+    "foto": null
   },
   {
     "id": "frutas-de-temporada-c-yogurt",
     "nombre": "Frutas de Temporada c/ Yogurt",
     "precio": "$85",
     "descripcion": "",
-    "seccion": "Frutas y Cereales"
+    "seccion": "Frutas y Cereales",
+    "foto": null
   },
   {
     "id": "frutas-con-cottage",
     "nombre": "Frutas con Cottage",
     "precio": "$99",
     "descripcion": "",
-    "seccion": "Frutas y Cereales"
+    "seccion": "Frutas y Cereales",
+    "foto": null
   },
   {
     "id": "frutas-con-cereal",
     "nombre": "Frutas con Cereal",
     "precio": "$79",
     "descripcion": "",
-    "seccion": "Frutas y Cereales"
+    "seccion": "Frutas y Cereales",
+    "foto": null
   },
   {
     "id": "avena-con-frutas-y-cereal",
     "nombre": "Avena con Frutas y Cereal",
     "precio": "$89",
     "descripcion": "",
-    "seccion": "Frutas y Cereales"
+    "seccion": "Frutas y Cereales",
+    "foto": null
   },
   {
     "id": "tribeca",
     "nombre": "Tribeca",
     "precio": "$109",
     "descripcion": "Pan de masa madre, salmón (receta de la casa), huevo estrellado y especias.",
-    "seccion": "Toast & Bagels"
+    "seccion": "Toast & Bagels",
+    "foto": null
   },
   {
     "id": "frank-sinatra",
     "nombre": "Frank Sinatra",
     "precio": "$99",
     "descripcion": "Manchego, jamón, tocino, tomate deshidratado, champiñón, espinaca, morrón, aguacate y huevo al gusto.",
-    "seccion": "Toast & Bagels"
+    "seccion": "Toast & Bagels",
+    "foto": null
   },
   {
     "id": "tierra-santa",
     "nombre": "Tierra Santa",
     "precio": "$99",
     "descripcion": "Guacamole con champiñón, rajas, elote y huevo revuelto.",
-    "seccion": "Toast & Bagels"
+    "seccion": "Toast & Bagels",
+    "foto": null
   },
   {
     "id": "avocado-toast",
     "nombre": "Avocado Toast",
     "precio": "$99",
     "descripcion": "Guacamole, huevo revuelto con cottage, arúgula y tomate cherry.",
-    "seccion": "Toast & Bagels"
+    "seccion": "Toast & Bagels",
+    "foto": null
   },
   {
     "id": "chapata-gourmet",
     "nombre": "Chapata Gourmet",
     "precio": "$115",
     "descripcion": "Mezcla de carnes frías con queso, aderezo y vegetales.",
-    "seccion": "Toast & Bagels"
+    "seccion": "Toast & Bagels",
+    "foto": null
   },
   {
     "id": "croissant-relleno",
     "nombre": "Croissant Relleno",
     "precio": "$69",
     "descripcion": "",
-    "seccion": "Toast & Bagels"
+    "seccion": "Toast & Bagels",
+    "foto": "/img/croissant-sq.jpg"
   },
   {
     "id": "sandwich-de-atun",
     "nombre": "Sándwich de Atún",
     "precio": "$89",
     "descripcion": "Ensalada de atún especial de la casa, con aderezo y manzana, en pan 12 granos.",
-    "seccion": "Toast & Bagels"
+    "seccion": "Toast & Bagels",
+    "foto": "/img/sandwich-atun-sq.jpg"
   },
   {
     "id": "bagel-salmon",
     "nombre": "Bagel Salmón",
     "precio": "$115",
     "descripcion": "Salmón salteado a la mantequilla con vegetales frescos y aderezos.",
-    "seccion": "Toast & Bagels"
+    "seccion": "Toast & Bagels",
+    "foto": null
   },
   {
     "id": "bagel-arrachera",
     "nombre": "Bagel Arrachera",
     "precio": "$110",
     "descripcion": "Arrachera salteada a la mantequilla con cebolla y champiñón, vegetales frescos y aderezos.",
-    "seccion": "Toast & Bagels"
+    "seccion": "Toast & Bagels",
+    "foto": null
   },
   {
     "id": "enchiladas-suizas",
     "nombre": "Enchiladas Suizas",
     "precio": "$120",
     "descripcion": "",
-    "seccion": "Especiales de la Casa"
+    "seccion": "Especiales de la Casa",
+    "foto": null
   },
   {
     "id": "enfrijoladas-a-la-mexicana",
     "nombre": "Enfrijoladas a la Mexicana",
     "precio": "$105",
     "descripcion": "",
-    "seccion": "Especiales de la Casa"
+    "seccion": "Especiales de la Casa",
+    "foto": null
   },
   {
     "id": "sweet-and-salty",
     "nombre": "Sweet and Salty",
     "precio": "$125",
     "descripcion": "",
-    "seccion": "Especiales de la Casa"
+    "seccion": "Especiales de la Casa",
+    "foto": "/img/sweet-and-salty-sq.jpg"
   },
   {
     "id": "sope-benedicto",
     "nombre": "Sope Benedicto",
     "precio": "$120",
     "descripcion": "",
-    "seccion": "Especiales de la Casa"
+    "seccion": "Especiales de la Casa",
+    "foto": "/img/sope-benedicto-sq.jpg"
   },
   {
     "id": "taco-de-camaron",
     "nombre": "Taco de Camarón",
     "precio": "$99",
     "descripcion": "",
-    "seccion": "Especiales de la Casa"
+    "seccion": "Especiales de la Casa",
+    "foto": null
   },
   {
     "id": "mr-pankeke-con-huevo",
     "nombre": "Mr. Pankeke con Huevo",
     "precio": "$135",
     "descripcion": "Papa rallada, cóctel de frutas y 2 pancakes. Con huevo al gusto.",
-    "seccion": "Mr. Pankeke"
+    "seccion": "Mr. Pankeke",
+    "foto": null
   },
   {
     "id": "mr-pankeke-mixto",
     "nombre": "Mr. Pankeke Mixto",
     "precio": "$150",
     "descripcion": "Chilaquiles al gusto, huevo al gusto, fruta fresca y 2 pancakes.",
-    "seccion": "Mr. Pankeke"
+    "seccion": "Mr. Pankeke",
+    "foto": null
   },
   {
     "id": "mr-pankeke-con-chilaquiles",
     "nombre": "Mr. Pankeke con Chilaquiles",
     "precio": "$145",
     "descripcion": "Papa rallada, cóctel de frutas y 2 pancakes. Con chilaquiles.",
-    "seccion": "Mr. Pankeke"
+    "seccion": "Mr. Pankeke",
+    "foto": null
   },
   {
     "id": "omelette-al-gusto",
     "nombre": "Omelette al Gusto",
     "precio": "$99",
     "descripcion": "2 ingredientes, papa rallada y pan tostado.",
-    "seccion": "Huevos"
+    "seccion": "Huevos",
+    "foto": null
   },
   {
     "id": "omelette-ejecutivo",
     "nombre": "Omelette Ejecutivo",
     "precio": "$125",
     "descripcion": "Salmón, papa rallada y pan tostado.",
-    "seccion": "Huevos"
+    "seccion": "Huevos",
+    "foto": null
   },
   {
     "id": "omelette-marina-s",
     "nombre": "Omelette Marina's",
     "precio": "$130",
     "descripcion": "Camarón, tocino y vegetales, papa rallada y pan tostado.",
-    "seccion": "Huevos"
+    "seccion": "Huevos",
+    "foto": null
   },
   {
     "id": "omelette-con-ensalada",
     "nombre": "Omelette con Ensalada",
     "precio": "$150",
     "descripcion": "4 ingredientes, pan tostado y ensalada fresca.",
-    "seccion": "Huevos"
+    "seccion": "Huevos",
+    "foto": null
   },
   {
     "id": "huevos-al-gusto",
     "nombre": "Huevos al Gusto",
     "precio": "$109",
     "descripcion": "2 huevos, chilaquiles y frijoles.",
-    "seccion": "Huevos"
+    "seccion": "Huevos",
+    "foto": null
   },
   {
     "id": "huevos-rancheros",
     "nombre": "Huevos Rancheros",
     "precio": "$99",
     "descripcion": "2 huevos estrellados, frijoles, tortilla frita y guacamole.",
-    "seccion": "Huevos"
+    "seccion": "Huevos",
+    "foto": null
   },
   {
     "id": "omelette-vegetariano",
     "nombre": "Omelette Vegetariano",
     "precio": "$89",
     "descripcion": "Espinacas, jitomate, cebolla, papa rallada y pan tostado.",
-    "seccion": "Huevos"
+    "seccion": "Huevos",
+    "foto": null
   },
   {
     "id": "omelette-colorado",
     "nombre": "Omelette Colorado",
     "precio": "$130",
     "descripcion": "Arrachera, vegetales, papa rallada y pan tostado.",
-    "seccion": "Huevos"
+    "seccion": "Huevos",
+    "foto": null
   },
   {
     "id": "chilaquiles-tradicionales",
     "nombre": "Chilaquiles Tradicionales",
     "precio": "$119",
     "descripcion": "Con frijoles y pan tostado. Salsa verde, roja o poblana.",
-    "seccion": "Chilaquiles"
+    "seccion": "Chilaquiles",
+    "foto": null
   },
   {
     "id": "chilaquiles-especiales",
     "nombre": "Chilaquiles Especiales",
     "precio": "$130",
     "descripcion": "Ensombrerados o con proteína, frijoles y pan tostado. Salsa verde, roja o poblana.",
-    "seccion": "Chilaquiles"
+    "seccion": "Chilaquiles",
+    "foto": "/img/chilaquiles-especiales-sq.jpg"
   },
   {
     "id": "chilaquiles-nortenos",
     "nombre": "Chilaquiles Norteños",
     "precio": "$145",
     "descripcion": "Salsa de chipotle, arrachera, frijoles y guacamole.",
-    "seccion": "Chilaquiles"
+    "seccion": "Chilaquiles",
+    "foto": "/img/chilaquiles-nortenos-sq.jpg"
   },
   {
     "id": "chilaquiles-ahogados",
     "nombre": "Chilaquiles Ahogados",
     "precio": "$130",
     "descripcion": "Salsa especial de la casa muy picante, arrachera y frijoles.",
-    "seccion": "Chilaquiles"
+    "seccion": "Chilaquiles",
+    "foto": null
   },
   {
     "id": "omelette-c-chilaquiles",
     "nombre": "Omelette c/ Chilaquiles",
     "precio": "$150",
     "descripcion": "4 ingredientes y pan tostado. Salsa verde, roja o poblana.",
-    "seccion": "Chilaquiles"
+    "seccion": "Chilaquiles",
+    "foto": null
   },
   {
     "id": "frijoles-con-queso",
     "nombre": "Frijoles con Queso",
     "precio": "$75",
     "descripcion": "Frijoles refritos de la casa y manchego.",
-    "seccion": "Molletes"
+    "seccion": "Molletes",
+    "foto": null
   },
   {
     "id": "molletes-choriqueso",
     "nombre": "Molletes Choriqueso",
     "precio": "$85",
     "descripcion": "Chorizo parrillero y queso fundido.",
-    "seccion": "Molletes"
+    "seccion": "Molletes",
+    "foto": null
   },
   {
     "id": "jamon-y-frijol",
     "nombre": "Jamón y Frijol",
     "precio": "$85",
     "descripcion": "Jamón de pierna y frijoles fritos con queso.",
-    "seccion": "Molletes"
+    "seccion": "Molletes",
+    "foto": null
   },
   {
     "id": "azucar-y-canela",
     "nombre": "Azúcar y Canela",
     "precio": "$59",
     "descripcion": "Mantequilla derretida, canela y azúcar.",
-    "seccion": "Molletes"
+    "seccion": "Molletes",
+    "foto": null
   },
   {
     "id": "cajeta-y-canela",
     "nombre": "Cajeta y Canela",
     "precio": "$69",
     "descripcion": "Cajeta quemada tradicional tibia con nuez.",
-    "seccion": "Molletes"
+    "seccion": "Molletes",
+    "foto": null
   },
   {
     "id": "molletes-mixtos",
     "nombre": "Molletes Mixtos",
     "precio": "$89",
     "descripcion": "1 pieza dulce y 1 pieza salada al gusto.",
-    "seccion": "Molletes"
+    "seccion": "Molletes",
+    "foto": null
   },
   {
     "id": "tecolote-con-chilaquiles",
     "nombre": "Tecolote con Chilaquiles",
     "precio": "$89",
     "descripcion": "1 mollete de frijoles, chorizo y queso, coronado con chilaquiles norteños con arrachera y guacamole.",
-    "seccion": "Molletes"
+    "seccion": "Molletes",
+    "foto": null
   },
   {
     "id": "chicken-strips",
     "nombre": "Chicken Strips",
     "precio": "$120",
     "descripcion": "Pollo empanizado, ensalada fresca y papas a la francesa.",
-    "seccion": "Ensaladas y Sopas"
+    "seccion": "Ensaladas y Sopas",
+    "foto": null
   },
   {
     "id": "ensalada-chef-pollo",
     "nombre": "Ensalada Chef Pollo",
     "precio": "$140",
     "descripcion": "Lechuga, zanahoria, jitomate, queso, pollo, chile morrón.",
-    "seccion": "Ensaladas y Sopas"
+    "seccion": "Ensaladas y Sopas",
+    "foto": null
   },
   {
     "id": "atun-con-aguacate",
     "nombre": "Atún con Aguacate",
     "precio": "$99",
     "descripcion": "",
-    "seccion": "Ensaladas y Sopas"
+    "seccion": "Ensaladas y Sopas",
+    "foto": null
   },
   {
     "id": "ensalada-ranchera",
     "nombre": "Ensalada Ranchera",
     "precio": "$109",
     "descripcion": "Tortilla frita, frijoles, jamón, huevo estrellado, ensalada del chef y guacamole.",
-    "seccion": "Ensaladas y Sopas"
+    "seccion": "Ensaladas y Sopas",
+    "foto": null
   },
   {
     "id": "fruit-salad-c-pollo",
     "nombre": "Fruit Salad c/ Pollo",
     "precio": "$140",
     "descripcion": "Con pollo a la plancha o empanizado.",
-    "seccion": "Ensaladas y Sopas"
+    "seccion": "Ensaladas y Sopas",
+    "foto": "/img/fruit-salad-sq.jpg"
   },
   {
     "id": "sopa-azteca",
     "nombre": "Sopa Azteca",
     "precio": "$89",
     "descripcion": "Con proteína $120.",
-    "seccion": "Ensaladas y Sopas"
+    "seccion": "Ensaladas y Sopas",
+    "foto": "/img/sopa-azteca-sq.jpg"
   },
   {
     "id": "mr-webon",
     "nombre": "Mr. Webón",
     "precio": "$79",
     "descripcion": "Huevo revuelto, tocino, jamón, chorizo, queso amarillo y maple. Pan: cuernito o bollo.",
-    "seccion": "Sándwiches y Lonches"
+    "seccion": "Sándwiches y Lonches",
+    "foto": null
   },
   {
     "id": "memito-sandwich",
     "nombre": "Memito Sándwich",
     "precio": "$99",
     "descripcion": "Champiñón, cebolla, queso, tocino, huevo, jamón y salsa roja en pan de caja, con papa rallada.",
-    "seccion": "Sándwiches y Lonches"
+    "seccion": "Sándwiches y Lonches",
+    "foto": null
   },
   {
     "id": "american-sandwich",
     "nombre": "American Sándwich",
     "precio": "$110",
     "descripcion": "Huevo estrellado, pan integral, guacamole, queso, jamón, espinacas, papa rallada y tocino.",
-    "seccion": "Sándwiches y Lonches"
+    "seccion": "Sándwiches y Lonches",
+    "foto": null
   },
   {
     "id": "club-sandwich",
     "nombre": "Club Sándwich",
     "precio": "$69",
     "descripcion": "",
-    "seccion": "Sándwiches y Lonches"
+    "seccion": "Sándwiches y Lonches",
+    "foto": null
   },
   {
     "id": "blt-clasico",
     "nombre": "BLT Clásico",
     "precio": "$59",
     "descripcion": "",
-    "seccion": "Sándwiches y Lonches"
+    "seccion": "Sándwiches y Lonches",
+    "foto": null
   },
   {
     "id": "patty-melt",
     "nombre": "Patty Melt",
     "precio": "$99",
     "descripcion": "Carne de hamburguesa, tocino, cebolla caramelizada, champiñones, queso amarillo y jalapeño.",
-    "seccion": "Sándwiches y Lonches"
+    "seccion": "Sándwiches y Lonches",
+    "foto": null
   },
   {
     "id": "waffle-chicken-cubano",
     "nombre": "Waffle Chicken / Cubano",
     "precio": "$99",
     "descripcion": "",
-    "seccion": "Sándwiches y Lonches"
+    "seccion": "Sándwiches y Lonches",
+    "foto": null
   },
   {
     "id": "lonche-de-pierna",
     "nombre": "Lonche de Pierna",
     "precio": "$75",
     "descripcion": "",
-    "seccion": "Sándwiches y Lonches"
+    "seccion": "Sándwiches y Lonches",
+    "foto": null
   },
   {
     "id": "lonche-de-panela",
     "nombre": "Lonche de Panela",
     "precio": "$60",
     "descripcion": "",
-    "seccion": "Sándwiches y Lonches"
+    "seccion": "Sándwiches y Lonches",
+    "foto": null
   },
   {
     "id": "lonche-de-machaca",
     "nombre": "Lonche de Machaca",
     "precio": "$80",
     "descripcion": "",
-    "seccion": "Sándwiches y Lonches"
+    "seccion": "Sándwiches y Lonches",
+    "foto": null
   },
   {
     "id": "lonche-de-jamon",
     "nombre": "Lonche de Jamón",
     "precio": "$60",
     "descripcion": "",
-    "seccion": "Sándwiches y Lonches"
+    "seccion": "Sándwiches y Lonches",
+    "foto": null
   },
   {
     "id": "lonche-de-chuleta",
     "nombre": "Lonche de Chuleta",
     "precio": "$75",
     "descripcion": "",
-    "seccion": "Sándwiches y Lonches"
+    "seccion": "Sándwiches y Lonches",
+    "foto": null
   },
   {
     "id": "lonche-mixto",
     "nombre": "Lonche Mixto",
     "precio": "$89",
     "descripcion": "",
-    "seccion": "Sándwiches y Lonches"
+    "seccion": "Sándwiches y Lonches",
+    "foto": null
   },
   {
     "id": "lonche-terminator",
     "nombre": "Lonche Terminator",
     "precio": "$120",
     "descripcion": "Pollo, tocino y dos huevos estrellados.",
-    "seccion": "Sándwiches y Lonches"
+    "seccion": "Sándwiches y Lonches",
+    "foto": "/img/lonche-terminator-sq.jpg"
   },
   {
     "id": "burrito-tradicional",
     "nombre": "Burrito Tradicional",
     "precio": "$69",
     "descripcion": "Huevo, queso y dos ingredientes a elegir: tocino, jamón o chorizo.",
-    "seccion": "Burritos y Quesadillas"
+    "seccion": "Burritos y Quesadillas",
+    "foto": null
   },
   {
     "id": "burrito-de-pierna",
     "nombre": "Burrito de Pierna",
     "precio": "$79",
     "descripcion": "El tradicional de pierna.",
-    "seccion": "Burritos y Quesadillas"
+    "seccion": "Burritos y Quesadillas",
+    "foto": null
   },
   {
     "id": "hamburger-burro",
     "nombre": "Hamburger Burro",
     "precio": "$79",
     "descripcion": "Carne de hamburguesa, queso, vegetales, pepinillos, cátsup y mostaza.",
-    "seccion": "Burritos y Quesadillas"
+    "seccion": "Burritos y Quesadillas",
+    "foto": null
   },
   {
     "id": "los-juanchos-3",
     "nombre": "Los Juanchos (3)",
     "precio": "$89",
     "descripcion": "Tortillas de harina rellenas de picadillo especial, bañadas en crema poblana.",
-    "seccion": "Burritos y Quesadillas"
+    "seccion": "Burritos y Quesadillas",
+    "foto": null
   },
   {
     "id": "burrito-tejano",
     "nombre": "Burrito Tejano",
     "precio": "$59",
     "descripcion": "Con frijoles, tocino y queso.",
-    "seccion": "Burritos y Quesadillas"
+    "seccion": "Burritos y Quesadillas",
+    "foto": null
   },
   {
     "id": "burrito-de-arrachera",
     "nombre": "Burrito de Arrachera",
     "precio": "$79",
     "descripcion": "Champiñones, cebolla en salsa verde, frijoles con queso y guacamole.",
-    "seccion": "Burritos y Quesadillas"
+    "seccion": "Burritos y Quesadillas",
+    "foto": null
   },
   {
     "id": "fajita-quesadilla-2",
     "nombre": "Fajita Quesadilla (2)",
     "precio": "$89",
     "descripcion": "Vegetales salteados con queso en tortilla de harina, con guacamole. Proteína: camarón, arrachera o pollo.",
-    "seccion": "Burritos y Quesadillas"
+    "seccion": "Burritos y Quesadillas",
+    "foto": null
   },
   {
     "id": "hamburguesa-maximus",
     "nombre": "Hamburguesa Maximus",
     "precio": "$139",
     "descripcion": "Res con tocino, huevo estrellado, tiras de cebolla crujientes y vegetales.",
-    "seccion": "Snacks"
+    "seccion": "Snacks",
+    "foto": null
   },
   {
     "id": "hamburguesa-clasica",
     "nombre": "Hamburguesa Clásica",
     "precio": "$89",
     "descripcion": "Res con tocino y queso.",
-    "seccion": "Snacks"
+    "seccion": "Snacks",
+    "foto": null
   },
   {
     "id": "hamburguesa-de-pollo",
     "nombre": "Hamburguesa de Pollo",
     "precio": "$85",
     "descripcion": "",
-    "seccion": "Snacks"
+    "seccion": "Snacks",
+    "foto": null
   },
   {
     "id": "hamburguesa-de-camaron",
     "nombre": "Hamburguesa de Camarón",
     "precio": "$89",
     "descripcion": "",
-    "seccion": "Snacks"
+    "seccion": "Snacks",
+    "foto": null
   },
   {
     "id": "hamburguesa-vegetariana",
     "nombre": "Hamburguesa Vegetariana",
     "precio": "$79",
     "descripcion": "",
-    "seccion": "Snacks"
+    "seccion": "Snacks",
+    "foto": null
   },
   {
     "id": "hot-dog",
     "nombre": "Hot Dog",
     "precio": "$40",
     "descripcion": "",
-    "seccion": "Snacks"
+    "seccion": "Snacks",
+    "foto": null
   },
   {
     "id": "hot-dog-chip",
     "nombre": "Hot Dog Chip",
     "precio": "$45",
     "descripcion": "",
-    "seccion": "Snacks"
+    "seccion": "Snacks",
+    "foto": null
   },
   {
     "id": "orden-de-papas",
     "nombre": "Orden de Papas",
     "precio": "$49",
     "descripcion": "",
-    "seccion": "Snacks"
+    "seccion": "Snacks",
+    "foto": null
   },
   {
     "id": "guacamole",
     "nombre": "Guacamole",
     "precio": "$49",
     "descripcion": "",
-    "seccion": "Snacks"
+    "seccion": "Snacks",
+    "foto": null
   },
   {
     "id": "cafe-americano",
     "nombre": "Café Americano",
     "precio": "$50",
     "descripcion": "",
-    "seccion": "Calientes"
+    "seccion": "Calientes",
+    "foto": null
   },
   {
     "id": "cafe-de-olla",
     "nombre": "Café de Olla",
     "precio": "$50",
     "descripcion": "",
-    "seccion": "Calientes"
+    "seccion": "Calientes",
+    "foto": "/img/cafe.jpg"
   },
   {
     "id": "cafe-espresso",
     "nombre": "Café Espresso",
     "precio": "$40",
     "descripcion": "",
-    "seccion": "Calientes"
+    "seccion": "Calientes",
+    "foto": null
   },
   {
     "id": "chocolate",
     "nombre": "Chocolate",
     "precio": "$59",
     "descripcion": "",
-    "seccion": "Calientes"
+    "seccion": "Calientes",
+    "foto": null
   },
   {
     "id": "capuchino",
     "nombre": "Capuchino",
     "precio": "$60",
     "descripcion": "",
-    "seccion": "Calientes"
+    "seccion": "Calientes",
+    "foto": null
   },
   {
     "id": "capuchino-moka-o-vainilla",
     "nombre": "Capuchino Moka o Vainilla",
     "precio": "$70",
     "descripcion": "",
-    "seccion": "Calientes"
+    "seccion": "Calientes",
+    "foto": null
   },
   {
     "id": "matcha",
     "nombre": "Matcha",
     "precio": "$59",
     "descripcion": "",
-    "seccion": "Calientes"
+    "seccion": "Calientes",
+    "foto": null
   },
   {
     "id": "te-chai-latte",
     "nombre": "Té Chai Latte",
     "precio": "$59",
     "descripcion": "",
-    "seccion": "Calientes"
+    "seccion": "Calientes",
+    "foto": null
   },
   {
     "id": "te-de-variedades-frio-o-caliente",
     "nombre": "Té de Variedades, Frío o Caliente",
     "precio": "$40",
     "descripcion": "",
-    "seccion": "Calientes"
+    "seccion": "Calientes",
+    "foto": null
   },
   {
     "id": "jugo-de-naranja",
     "nombre": "Jugo de Naranja",
     "precio": "CH $50 · G $55",
     "descripcion": "",
-    "seccion": "Jugos y Aguas"
+    "seccion": "Jugos y Aguas",
+    "foto": "/img/jugo-naranja.jpg"
   },
   {
     "id": "jugo-verde",
     "nombre": "Jugo Verde",
     "precio": "CH $55 · G $60",
     "descripcion": "",
-    "seccion": "Jugos y Aguas"
+    "seccion": "Jugos y Aguas",
+    "foto": null
   },
   {
     "id": "agua-fresca",
     "nombre": "Agua Fresca",
     "precio": "$29",
     "descripcion": "",
-    "seccion": "Jugos y Aguas"
+    "seccion": "Jugos y Aguas",
+    "foto": null
   },
   {
     "id": "limonada-mineral-o-natural",
     "nombre": "Limonada Mineral o Natural",
     "precio": "$35",
     "descripcion": "",
-    "seccion": "Jugos y Aguas"
+    "seccion": "Jugos y Aguas",
+    "foto": null
   },
   {
     "id": "refrescos",
     "nombre": "Refrescos",
     "precio": "$29",
     "descripcion": "",
-    "seccion": "Jugos y Aguas"
+    "seccion": "Jugos y Aguas",
+    "foto": null
   },
   {
     "id": "conga",
     "nombre": "Conga",
     "precio": "$59",
     "descripcion": "",
-    "seccion": "Especialidades"
+    "seccion": "Especialidades",
+    "foto": null
   },
   {
     "id": "very-berry",
     "nombre": "Very Berry",
     "precio": "$59",
     "descripcion": "",
-    "seccion": "Especialidades"
+    "seccion": "Especialidades",
+    "foto": null
   },
   {
     "id": "all-day-energy",
     "nombre": "All Day Energy",
     "precio": "$59",
     "descripcion": "",
-    "seccion": "Especialidades"
+    "seccion": "Especialidades",
+    "foto": null
   },
   {
     "id": "licuado-mr-pankeke",
     "nombre": "Licuado Mr. Pankeke",
     "precio": "$59",
     "descripcion": "",
-    "seccion": "Especialidades"
+    "seccion": "Especialidades",
+    "foto": null
   },
   {
     "id": "frappe",
     "nombre": "Frappé",
     "precio": "CH $55 · G $65",
     "descripcion": "",
-    "seccion": "Especialidades"
+    "seccion": "Especialidades",
+    "foto": null
   },
   {
     "id": "frappe-moka-o-vainilla",
     "nombre": "Frappé Moka o Vainilla",
     "precio": "CH $60 · G $70",
     "descripcion": "",
-    "seccion": "Especialidades"
+    "seccion": "Especialidades",
+    "foto": null
   },
   {
     "id": "malteadas",
     "nombre": "Malteadas",
     "precio": "$65",
     "descripcion": "",
-    "seccion": "Especialidades"
+    "seccion": "Especialidades",
+    "foto": null
   },
   {
     "id": "chocomilk",
     "nombre": "Chocomilk",
     "precio": "CH $25 · G $45",
     "descripcion": "",
-    "seccion": "Especialidades"
+    "seccion": "Especialidades",
+    "foto": null
   }
 ]
