@@ -42,6 +42,7 @@ button:disabled{opacity:.5;cursor:default}
 .boton-foto{display:inline-block;margin:0;font-size:15px;letter-spacing:.04em;padding:8px 12px;border-radius:8px;border:1px solid var(--linea);cursor:pointer}
 .guardar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px}
 .guardar .msg{margin:0}
+#buscar{width:100%;font:inherit;font-size:16px;padding:10px 12px;margin:4px 0 4px;border-radius:10px;border:1px solid var(--linea);background:transparent;color:var(--tiza)}
 [hidden]{display:none!important}
 @media (max-width:520px){
   .plato{grid-template-columns:52px 1fr}
@@ -60,6 +61,7 @@ button:disabled{opacity:.5;cursor:default}
       </div>
     </div>
     <p class="ayuda">Cambia la foto de cualquier platillo con su botón. Marca hasta 12 favoritos y guarda.</p>
+    <input id="buscar" type="search" placeholder="Buscar platillo o sección…" autocomplete="off" aria-label="Buscar platillo">
     <div id="lista"></div>
     <div class="guardar">
       <p id="msg-favs" class="msg" role="status" aria-live="polite"></p>
@@ -92,6 +94,23 @@ button:disabled{opacity:.5;cursor:default}
 
   function esFavorito(id) {
     return estado.favs.indexOf(id) !== -1;
+  }
+
+  // Quita acentos y mayúsculas para que "cafe" encuentre "Café".
+  function norm(s) {
+    return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  }
+
+  function filtrar() {
+    var q = norm(document.getElementById("buscar").value.trim());
+    lista.querySelectorAll(".plato").forEach(function (li) {
+      li.hidden = !!q && li.getAttribute("data-buscar").indexOf(q) === -1;
+    });
+    lista.querySelectorAll("ul.platos").forEach(function (ul) {
+      var hay = !!ul.querySelector(".plato:not([hidden])");
+      ul.hidden = !hay;
+      ul.previousElementSibling.hidden = !hay;
+    });
   }
 
   function fotoUrl(id, v, tam) {
@@ -156,6 +175,7 @@ button:disabled{opacity:.5;cursor:default}
     var li = document.createElement("li");
     li.className = "plato";
     li.setAttribute("data-id", p.id);
+    li.setAttribute("data-buscar", norm(p.nombre + " " + p.descripcion + " " + p.seccion));
 
     var foto = document.createElement("div");
     foto.className = "foto";
@@ -242,7 +262,10 @@ button:disabled{opacity:.5;cursor:default}
       lista.appendChild(ul);
     });
     actualizarContador();
+    filtrar();
   }
+
+  document.getElementById("buscar").addEventListener("input", filtrar);
 
   function actualizarContador() {
     var lleno = estado.favs.length >= MAX_FAVORITOS;
