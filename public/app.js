@@ -163,16 +163,99 @@
     });
   }
 
+  var fotosPublicadas = {};
+
   function setupMenuDatos() {
     fetch("/datos-menu.json", { cache: "no-cache" })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (d) {
         if (!d) return;
         var fotos = d.fotos || {};
+        fotosPublicadas = fotos;
         Object.keys(fotos).forEach(function (id) { aplicarFotoPlato(id, fotos[id]); });
         if (Array.isArray(d.favoritos) && d.favoritos.length) aplicarFavoritos(d.favoritos, fotos);
+        marcarFotos();
       })
       .catch(function () { /* sin datos, el menú se ve igual */ });
+  }
+
+  // Zoom: al tocar la foto de un platillo o favorito, se muestra más grande.
+  var SELECTOR_FOTO = "#menu .row img, li.fav img";
+
+  // Foto en su tamaño más grande disponible.
+  function fotoGrande(img) {
+    var base = img.closest("[data-id]");
+    var id = base ? base.getAttribute("data-id") : null;
+    if (id && fotosPublicadas[id]) return fotoUrl(id, fotosPublicadas[id], "1200");
+    if (img.srcset) {
+      var partes = img.srcset.split(",");
+      return partes[partes.length - 1].trim().split(" ")[0];
+    }
+    var fav = id ? document.querySelector('li.fav[data-id="' + id + '"] img') : null;
+    if (fav && fav.srcset) {
+      var lista = fav.srcset.split(",");
+      return lista[lista.length - 1].trim().split(" ")[0];
+    }
+    return img.src;
+  }
+
+  function abrirZoom(src, alt) {
+    var fondo = document.createElement("div");
+    fondo.className = "zoom";
+    fondo.setAttribute("role", "dialog");
+    fondo.setAttribute("aria-modal", "true");
+    fondo.setAttribute("aria-label", alt || "Foto del platillo");
+
+    var grande = document.createElement("img");
+    grande.src = src;
+    grande.alt = alt || "";
+
+    var cerrar = document.createElement("button");
+    cerrar.type = "button";
+    cerrar.className = "zoom-cerrar";
+    cerrar.setAttribute("aria-label", "Cerrar");
+    cerrar.textContent = "×";
+
+    fondo.appendChild(grande);
+    fondo.appendChild(cerrar);
+    document.body.appendChild(fondo);
+    document.body.style.overflow = "hidden";
+    cerrar.focus();
+
+    function cerrarZoom() {
+      fondo.parentNode.removeChild(fondo);
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", alPresionar);
+    }
+    function alPresionar(e) {
+      if (e.key === "Escape") cerrarZoom();
+    }
+    fondo.addEventListener("click", cerrarZoom);
+    document.addEventListener("keydown", alPresionar);
+  }
+
+  // Las fotos se pueden enfocar con teclado para abrirlas con Enter.
+  function marcarFotos() {
+    document.querySelectorAll(SELECTOR_FOTO).forEach(function (img) {
+      if (img.getAttribute("role")) return;
+      img.setAttribute("role", "button");
+      img.setAttribute("tabindex", "0");
+      img.setAttribute("aria-label", "Ampliar foto de " + (img.alt || "platillo"));
+    });
+  }
+
+  function setupZoom() {
+    document.addEventListener("click", function (e) {
+      var img = e.target.closest ? e.target.closest(SELECTOR_FOTO) : null;
+      if (img) abrirZoom(fotoGrande(img), img.alt);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      var img = e.target.matches && e.target.matches(SELECTOR_FOTO) ? e.target : null;
+      if (!img) return;
+      e.preventDefault();
+      abrirZoom(fotoGrande(img), img.alt);
+    });
   }
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -180,6 +263,8 @@
     setupSearch();
     setupCatnav();
     setupShare();
+    setupZoom();
+    marcarFotos();
     setupMenuDatos();
   });
 })();
